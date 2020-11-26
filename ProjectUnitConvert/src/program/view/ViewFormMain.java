@@ -82,6 +82,7 @@ public class ViewFormMain extends javax.swing.JFrame {
         getContentPane().add(jLabelTextTo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, -1, -1));
 
         jTextConverted.setText(" ");
+        jTextConverted.setEnabled(false);
         getContentPane().add(jTextConverted, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 150, 70));
 
         jComboBox01ConvertFrom.setMaximumRowCount(200);
