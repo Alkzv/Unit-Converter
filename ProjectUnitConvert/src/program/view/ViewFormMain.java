@@ -84,15 +84,15 @@ public class ViewFormMain extends javax.swing.JFrame {
         getContentPane().add(jTextConverted, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 150, 70));
 
         jComboBox01ConvertFrom.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(jComboBox01ConvertFrom, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 70, 300, 70));
+        getContentPane().add(jComboBox01ConvertFrom, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 70, 530, 70));
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jComboBox2.setSelectedIndex(-1);
         jComboBox2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, 300, 70));
+        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, 530, 70));
 
         jLabelBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/FundoView1.png"))); // NOI18N
-        getContentPane().add(jLabelBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(-16, 0, 830, 390));
+        getContentPane().add(jLabelBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(-16, 0, 1380, 390));
 
         jMenu1.setText("File");
         jMenuBar2.add(jMenu1);
@@ -102,7 +102,7 @@ public class ViewFormMain extends javax.swing.JFrame {
 
         setJMenuBar(jMenuBar2);
 
-        setSize(new java.awt.Dimension(806, 402));
+        setSize(new java.awt.Dimension(1061, 402));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
