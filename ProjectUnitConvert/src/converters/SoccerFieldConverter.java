@@ -15,8 +15,7 @@ public class SoccerFieldConverter extends AbstractConverter {
 
     public SoccerFieldConverter() {
 
-         super.setDescriptionClassConverter("soccer field (FIFA) (--) [area]");
-       
+        super.setDescriptionClassConverter("soccer field (FIFA) (--) [area]");
 
     }
 }

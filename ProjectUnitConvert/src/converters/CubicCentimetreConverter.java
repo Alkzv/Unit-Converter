@@ -17,6 +17,5 @@ public class CubicCentimetreConverter extends AbstractConverter {
 
         super.setDescriptionClassConverter("cubic centimetre (cm³) [volume]");
 
-        
     }
 }

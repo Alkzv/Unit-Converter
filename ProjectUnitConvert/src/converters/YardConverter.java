@@ -11,12 +11,11 @@ import converters.ClassInterface.AbstractConverter;
  *
  * @author PC
  */
-public class YardConverter extends AbstractConverter{
+public class YardConverter extends AbstractConverter {
 
     public YardConverter() {
 
         super.setDescriptionClassConverter("yard (yd) [distance]");
-
 
     }
 }

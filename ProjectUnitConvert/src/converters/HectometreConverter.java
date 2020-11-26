@@ -15,8 +15,7 @@ public class HectometreConverter extends AbstractConverter {
 
     public HectometreConverter() {
 
-         super.setDescriptionClassConverter("hectometre (hm) [distance]");
+        super.setDescriptionClassConverter("hectometre (hm) [distance]");
 
-        
     }
 }

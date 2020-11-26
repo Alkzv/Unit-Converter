@@ -10,5 +10,5 @@ package converters.Enum;
  * @author PC
  */
 public enum MeasureType {
-    
+
 }

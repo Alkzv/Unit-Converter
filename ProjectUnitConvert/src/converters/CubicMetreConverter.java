@@ -17,6 +17,5 @@ public class CubicMetreConverter extends AbstractConverter {
 
          super.setDescriptionClassConverter("cubic metre (m³) [volume]");
 
-        
     }
 }

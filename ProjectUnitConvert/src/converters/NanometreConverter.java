@@ -11,12 +11,11 @@ import converters.ClassInterface.AbstractConverter;
  *
  * @author PC
  */
-public class NanometreConverter extends AbstractConverter{
+public class NanometreConverter extends AbstractConverter {
 
     public NanometreConverter() {
 
-         super.setDescriptionClassConverter("nanometre (nm) [distance]");
-
+        super.setDescriptionClassConverter("nanometre (nm) [distance]");
 
     }
 }

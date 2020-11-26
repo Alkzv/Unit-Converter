@@ -11,12 +11,11 @@ import converters.ClassInterface.AbstractConverter;
  *
  * @author PC
  */
-public class LitreConverter extends AbstractConverter{
+public class LitreConverter extends AbstractConverter {
 
     public LitreConverter() {
 
-         super.setDescriptionClassConverter("litre (L) [volume]");
+        super.setDescriptionClassConverter("litre (L) [volume]");
 
-        
     }
 }

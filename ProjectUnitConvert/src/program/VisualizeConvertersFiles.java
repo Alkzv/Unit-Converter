@@ -26,7 +26,7 @@ public class VisualizeConvertersFiles {
         File[] archives = file.listFiles();
 
         for (File archive : archives) {
-            
+
             if (!archive.getName().equals("Enum") && !archive.getName().equals("ClassInterface")) {
 
                 fileNameWithOutExt = archive.getName().replaceFirst("[.][^.]+$", "");

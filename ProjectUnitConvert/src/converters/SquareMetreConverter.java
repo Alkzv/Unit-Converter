@@ -11,12 +11,11 @@ import converters.ClassInterface.AbstractConverter;
  *
  * @author PC
  */
-public class SquareMetreConverter extends AbstractConverter{
+public class SquareMetreConverter extends AbstractConverter {
 
     public SquareMetreConverter() {
 
-         super.setDescriptionClassConverter("square metre (m²) [area]");
-
+        super.setDescriptionClassConverter("square metre (m²) [area]");
 
     }
 }

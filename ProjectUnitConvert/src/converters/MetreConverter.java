@@ -15,8 +15,7 @@ public class MetreConverter extends AbstractConverter {
 
     public MetreConverter() {
 
-         super.setDescriptionClassConverter("metre (m) [distance]");
+        super.setDescriptionClassConverter("metre (m) [distance]");
 
-        
     }
 }

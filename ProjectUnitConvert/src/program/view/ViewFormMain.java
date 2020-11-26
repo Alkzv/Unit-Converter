@@ -20,16 +20,15 @@ public class ViewFormMain extends javax.swing.JFrame {
         initComponents();
 
         try {
-           
 
             VisualizeConvertersFiles visualizeArchivesConverters = new VisualizeConvertersFiles();
             List<String> listWithNamesArchivesInDirectoryConverters = visualizeArchivesConverters.VisualizeConvertersFiles();
 
             for (String listNameArchive : listWithNamesArchivesInDirectoryConverters) {
                 String teste = listNameArchive;
-                AbstractConverter newInstance = (AbstractConverter)Class.forName(teste).getConstructor().newInstance();
-               
-                jComboBox01ConvertFrom.addItem(newInstance.getDescriptionClassConverter()+": "+listNameArchive);
+                AbstractConverter newInstance = (AbstractConverter) Class.forName(teste).getConstructor().newInstance();
+
+                jComboBox01ConvertFrom.addItem(newInstance.getDescriptionClassConverter() + ": " + listNameArchive);
 
             }
 

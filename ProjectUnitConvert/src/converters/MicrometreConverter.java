@@ -15,8 +15,7 @@ public class MicrometreConverter extends AbstractConverter {
 
     public MicrometreConverter() {
 
-         super.setDescriptionClassConverter("micrometre (μm) [distance]");
+        super.setDescriptionClassConverter("micrometre (μm) [distance]");
 
-        
     }
 }

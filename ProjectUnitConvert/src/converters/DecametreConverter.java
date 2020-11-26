@@ -15,9 +15,7 @@ public class DecametreConverter extends AbstractConverter {
 
     public DecametreConverter() {
 
-         super.setDescriptionClassConverter("decametre (dam) [distance]");
+        super.setDescriptionClassConverter("decametre (dam) [distance]");
 
-        
     }
-
 }

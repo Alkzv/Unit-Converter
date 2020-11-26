@@ -17,6 +17,5 @@ public class KilometreConverter extends AbstractConverter {
 
         super.setDescriptionClassConverter("kilometre (km) [distance]");
 
-        
     }
 }

@@ -11,12 +11,11 @@ import converters.ClassInterface.AbstractConverter;
  *
  * @author PC
  */
-public class USLiquidGallonConverter extends AbstractConverter{
+public class USLiquidGallonConverter extends AbstractConverter {
 
     public USLiquidGallonConverter() {
 
-            super.setDescriptionClassConverter("US liquid gallon (gal) [volume]");
-        
+        super.setDescriptionClassConverter("US liquid gallon (gal) [volume]");
 
     }
 }

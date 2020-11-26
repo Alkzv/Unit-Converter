@@ -9,24 +9,20 @@ package converters.ClassInterface;
  *
  * @author PC
  */
-
 public abstract class AbstractConverter {
-    
-  protected String descriptionOftheClass;
-    
-    
+
+    protected String descriptionOftheClass;
+
     public void setDescriptionClassConverter(String descriptionOftheClass) {
-        
+
         this.descriptionOftheClass = descriptionOftheClass;
-       
+
     }
 
-    public String getDescriptionClassConverter( ) {
-        
+    public String getDescriptionClassConverter() {
+
         return this.descriptionOftheClass;
-       
+
     }
 
-
-  
 }

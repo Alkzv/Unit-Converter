@@ -4,17 +4,18 @@
  * and open the template in the editor.
  */
 package converters;
+
 import converters.ClassInterface.AbstractConverter;
+
 /**
  *
  * @author PC
  */
-public class MillimetreConverter extends AbstractConverter{
+public class MillimetreConverter extends AbstractConverter {
 
     public MillimetreConverter() {
 
-         super.setDescriptionClassConverter("millimetre (mm) [volume]");
+        super.setDescriptionClassConverter("millimetre (mm) [volume]");
 
-        
     }
 }

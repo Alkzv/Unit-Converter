@@ -5,23 +5,19 @@
  */
 package program.view;
 
-import javax.swing.ImageIcon;
-
 /**
  *
- * @author 
+ * @author
  */
 public class ViewPrimeiroForm extends javax.swing.JFrame {
 
     /**
      * Creates new form Iniciar
      */
-    
     public ViewPrimeiroForm() {
-        
+
         initComponents();
-       
-       
+
     }
 
     /**
@@ -81,12 +77,12 @@ public class ViewPrimeiroForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarActionPerformed
-       // ENcaminhar para outra tela (classe)
-       
+        // ENcaminhar para outra tela (classe)
+
         ViewFormMain viewMain = new ViewFormMain();
         viewMain.setVisible(true);
         dispose(); // fecha a interface viewPrimeiroForm e abre esta outra
-        
+
     }//GEN-LAST:event_jButtonEntrarActionPerformed
 
     private void jButtonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSairActionPerformed
@@ -98,7 +94,7 @@ public class ViewPrimeiroForm extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-     
+
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ViewPrimeiroForm().setVisible(true);
@@ -113,31 +109,4 @@ public class ViewPrimeiroForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelTitulo;
     // End of variables declaration//GEN-END:variables
 
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

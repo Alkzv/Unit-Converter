@@ -14,10 +14,8 @@ import converters.ClassInterface.AbstractConverter;
 public class InchConverter extends AbstractConverter {
 
     public InchConverter() {
-        
+
         super.setDescriptionClassConverter("inch (in) [distance]");
 
-        
     }
-
 }

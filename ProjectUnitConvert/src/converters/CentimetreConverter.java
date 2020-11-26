@@ -18,5 +18,4 @@ public class CentimetreConverter extends AbstractConverter {
         super.setDescriptionClassConverter("Centimetre(cm) [distance]");
 
     }
-
 }
