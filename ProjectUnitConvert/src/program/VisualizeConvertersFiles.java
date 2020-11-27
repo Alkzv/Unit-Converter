@@ -17,12 +17,13 @@ import java.util.List;
 public class VisualizeConvertersFiles {
 
     private List<String> namesOfTheArchives = new ArrayList<String>();
-    private String path = "C:\\Users\\PC\\Unit-Converter\\ProjectUnitConvert\\src\\converters";
+    private String path = System.getProperty("user.dir");
     private String fileNameWithOutExt;
+
 
     public List<String> VisualizeConvertersFiles() throws Exception {
 
-        File file = new File(path);
+        File file = new File(path + "/src/converters");
         File[] archives = file.listFiles();
 
         for (File archive : archives) {

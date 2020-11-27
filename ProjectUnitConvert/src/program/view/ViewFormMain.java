@@ -126,7 +126,6 @@ public class ViewFormMain extends javax.swing.JFrame {
                     if (typeItemSelected.equals(typeDescriptionOfTheClass) && !itemJComboBox.equals(itemSelected)) {
                         jComboBox2To.addItem(basicUnitDescriptionOfTheClass + " [" + typeDescriptionOfTheClass + "]: " + listNameArchive);
                     }
-                    
                 }
             }
 
@@ -139,7 +138,7 @@ public class ViewFormMain extends javax.swing.JFrame {
         }
     }
     private void ConvertersIClasstemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ConvertersIClasstemStateChanged
-
+        System.out.println("teste");
         if (evt.getStateChange() == ItemEvent.SELECTED && changedOptionJComboBox01) {
 
             try {
