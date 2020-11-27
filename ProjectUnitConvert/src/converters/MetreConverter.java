@@ -6,6 +6,7 @@
 package converters;
 
 import converters.ClassInterface.AbstractConverter;
+import converters.Enum.MeasureType;
 
 /**
  *
@@ -15,7 +16,8 @@ public class MetreConverter extends AbstractConverter {
 
     public MetreConverter() {
 
-        super.setDescriptionClassConverter("metre (m) [distance]");
+        super.setDescriptionClassConverter(MeasureType.DISTANCEMETRE);
+         
 
     }
 }

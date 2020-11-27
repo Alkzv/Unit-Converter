@@ -6,6 +6,7 @@
 package converters;
 
 import converters.ClassInterface.AbstractConverter;
+import converters.Enum.MeasureType;
 
 /**
  *
@@ -15,7 +16,8 @@ public class HectometreConverter extends AbstractConverter {
 
     public HectometreConverter() {
 
-        super.setDescriptionClassConverter("hectometre (hm) [distance]");
+        super.setDescriptionClassConverter(MeasureType.DISTANCEHECTOMETRE);
+         
 
     }
 }

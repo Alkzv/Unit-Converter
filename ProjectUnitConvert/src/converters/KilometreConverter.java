@@ -6,6 +6,7 @@
 package converters;
 
 import converters.ClassInterface.AbstractConverter;
+import converters.Enum.MeasureType;
 
 /**
  *
@@ -15,7 +16,8 @@ public class KilometreConverter extends AbstractConverter {
 
     public KilometreConverter() {
 
-        super.setDescriptionClassConverter("kilometre (km) [distance]");
+        super.setDescriptionClassConverter(MeasureType.DISTANCEKILOMETRE);
+         
 
     }
 }

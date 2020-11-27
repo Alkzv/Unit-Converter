@@ -6,6 +6,7 @@
 package converters;
 
 import converters.ClassInterface.AbstractConverter;
+import converters.Enum.MeasureType;
 
 /**
  *
@@ -15,7 +16,7 @@ public class DecametreConverter extends AbstractConverter {
 
     public DecametreConverter() {
 
-        super.setDescriptionClassConverter("decametre (dam) [distance]");
+         super.setDescriptionClassConverter(MeasureType.DISTANCEDECAMETRE);
 
     }
 }

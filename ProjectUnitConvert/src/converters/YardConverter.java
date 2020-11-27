@@ -6,6 +6,7 @@
 package converters;
 
 import converters.ClassInterface.AbstractConverter;
+import converters.Enum.MeasureType;
 
 /**
  *
@@ -15,7 +16,8 @@ public class YardConverter extends AbstractConverter {
 
     public YardConverter() {
 
-        super.setDescriptionClassConverter("yard (yd) [distance]");
+        super.setDescriptionClassConverter(MeasureType.DISTANCEYARD);
+         
 
     }
 }

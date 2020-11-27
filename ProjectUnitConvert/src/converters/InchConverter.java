@@ -6,6 +6,7 @@
 package converters;
 
 import converters.ClassInterface.AbstractConverter;
+import converters.Enum.MeasureType;
 
 /**
  *
@@ -15,7 +16,8 @@ public class InchConverter extends AbstractConverter {
 
     public InchConverter() {
 
-        super.setDescriptionClassConverter("inch (in) [distance]");
+        super.setDescriptionClassConverter(MeasureType.DISTANCEINCH);
+         
 
     }
 }

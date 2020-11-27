@@ -5,24 +5,31 @@
  */
 package converters.ClassInterface;
 
+import converters.Enum.MeasureType;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  *
  * @author PC
  */
 public abstract class AbstractConverter {
 
-    protected String descriptionOftheClass;
+    private String nameOfEnumUsedOfTheClass;
+    
+    public void setDescriptionClassConverter(Enum descriptionOftheClass) {
+        
+        this.nameOfEnumUsedOfTheClass = descriptionOftheClass.toString();
+    }
 
-    public void setDescriptionClassConverter(String descriptionOftheClass) {
+    public List<MeasureType> getDescriptionClassConverter() {
 
-        this.descriptionOftheClass = descriptionOftheClass;
+        List<MeasureType> list = Arrays.asList(MeasureType.valueOf(nameOfEnumUsedOfTheClass));
+        
+        return list;
+    
+        }
+   
 
     }
 
-    public String getDescriptionClassConverter() {
-
-        return this.descriptionOftheClass;
-
-    }
-
-}

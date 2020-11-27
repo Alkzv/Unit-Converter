@@ -6,6 +6,7 @@
 package converters;
 
 import converters.ClassInterface.AbstractConverter;
+import converters.Enum.MeasureType;
 
 /**
  *
@@ -15,7 +16,8 @@ public class MillimetreConverter extends AbstractConverter {
 
     public MillimetreConverter() {
 
-        super.setDescriptionClassConverter("millimetre (mm) [volume]");
+        super.setDescriptionClassConverter(MeasureType.VOLUMEMILLIMETRE);
+         
 
     }
 }

@@ -6,6 +6,7 @@
 package converters;
 
 import converters.ClassInterface.AbstractConverter;
+import converters.Enum.MeasureType;
 
 /**
  *
@@ -15,7 +16,8 @@ public class MicrometreConverter extends AbstractConverter {
 
     public MicrometreConverter() {
 
-        super.setDescriptionClassConverter("micrometre (μm) [distance]");
+        super.setDescriptionClassConverter(MeasureType.DISTANCEMICROMETRE);
+         
 
     }
 }

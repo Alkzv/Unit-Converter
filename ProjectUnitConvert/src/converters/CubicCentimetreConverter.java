@@ -6,6 +6,7 @@
 package converters;
 
 import converters.ClassInterface.AbstractConverter;
+import converters.Enum.MeasureType;
 
 /**
  *
@@ -15,7 +16,7 @@ public class CubicCentimetreConverter extends AbstractConverter {
 
     public CubicCentimetreConverter() {
 
-        super.setDescriptionClassConverter("cubic centimetre (cm³) [volume]");
+        super.setDescriptionClassConverter(MeasureType.VOLUMECUBICCENTIMETRE);
 
     }
 }

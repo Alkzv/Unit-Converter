@@ -15,9 +15,9 @@ public class ViewPrimeiroForm extends javax.swing.JFrame {
      * Creates new form Iniciar
      */
     public ViewPrimeiroForm() {
-
+        
         initComponents();
-
+        
     }
 
     /**
@@ -82,11 +82,9 @@ public class ViewPrimeiroForm extends javax.swing.JFrame {
         ViewFormMain viewMain = new ViewFormMain();
         viewMain.setVisible(true);
         dispose(); // fecha a interface viewPrimeiroForm e abre esta outra
-
     }//GEN-LAST:event_jButtonEntrarActionPerformed
 
     private void jButtonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSairActionPerformed
-        //SAIR
         System.exit(0);
     }//GEN-LAST:event_jButtonSairActionPerformed
 
@@ -94,7 +92,7 @@ public class ViewPrimeiroForm extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ViewPrimeiroForm().setVisible(true);

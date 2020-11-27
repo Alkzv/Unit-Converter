@@ -6,6 +6,7 @@
 package converters;
 
 import converters.ClassInterface.AbstractConverter;
+import converters.Enum.MeasureType;
 
 /**
  *
@@ -15,7 +16,7 @@ public class CentimetreConverter extends AbstractConverter {
 
     public CentimetreConverter() {
 
-        super.setDescriptionClassConverter("Centimetre(cm) [distance]");
+        super.setDescriptionClassConverter(MeasureType.DISTANCECENTIMETRE);
 
     }
 }

@@ -6,6 +6,7 @@
 package converters;
 
 import converters.ClassInterface.AbstractConverter;
+import converters.Enum.MeasureType;
 
 /**
  *
@@ -15,7 +16,8 @@ public class NanometreConverter extends AbstractConverter {
 
     public NanometreConverter() {
 
-        super.setDescriptionClassConverter("nanometre (nm) [distance]");
+        super.setDescriptionClassConverter(MeasureType.DISTANCENANOMETRE);
+         
 
     }
 }

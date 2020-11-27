@@ -6,7 +6,7 @@
 package converters;
 
 import converters.ClassInterface.AbstractConverter;
-
+import converters.Enum.MeasureType;
 /**
  *
  * @author PC
@@ -15,7 +15,7 @@ public class SquareMetreConverter extends AbstractConverter {
 
     public SquareMetreConverter() {
 
-        super.setDescriptionClassConverter("square metre (m²) [area]");
+        super.setDescriptionClassConverter(MeasureType.AREASQUAREMETRE);
 
     }
 }

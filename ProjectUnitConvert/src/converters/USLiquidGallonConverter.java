@@ -6,6 +6,7 @@
 package converters;
 
 import converters.ClassInterface.AbstractConverter;
+import converters.Enum.MeasureType;
 
 /**
  *
@@ -15,7 +16,8 @@ public class USLiquidGallonConverter extends AbstractConverter {
 
     public USLiquidGallonConverter() {
 
-        super.setDescriptionClassConverter("US liquid gallon (gal) [volume]");
+        super.setDescriptionClassConverter(MeasureType.VOLUMEUSLIQUIDGALLON);
+         
 
     }
 }

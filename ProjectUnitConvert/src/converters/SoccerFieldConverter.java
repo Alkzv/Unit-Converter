@@ -6,6 +6,7 @@
 package converters;
 
 import converters.ClassInterface.AbstractConverter;
+import converters.Enum.MeasureType;
 
 /**
  *
@@ -15,7 +16,8 @@ public class SoccerFieldConverter extends AbstractConverter {
 
     public SoccerFieldConverter() {
 
-        super.setDescriptionClassConverter("soccer field (FIFA) (--) [area]");
+        super.setDescriptionClassConverter(MeasureType.AREASOCCERFIELD);
+         
 
     }
 }

@@ -6,6 +6,7 @@
 package converters;
 
 import converters.ClassInterface.AbstractConverter;
+import converters.Enum.MeasureType;
 
 /**
  *
@@ -15,7 +16,8 @@ public class MilliLitreConverter extends AbstractConverter {
 
     public MilliLitreConverter() {
 
-        super.setDescriptionClassConverter("millilitre (ml) [volume]");
+        super.setDescriptionClassConverter(MeasureType.VOLUMEMILLILITRE);
+         
 
     }
 }

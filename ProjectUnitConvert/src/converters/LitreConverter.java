@@ -6,6 +6,7 @@
 package converters;
 
 import converters.ClassInterface.AbstractConverter;
+import converters.Enum.MeasureType;
 
 /**
  *
@@ -15,7 +16,8 @@ public class LitreConverter extends AbstractConverter {
 
     public LitreConverter() {
 
-        super.setDescriptionClassConverter("litre (L) [volume]");
+        super.setDescriptionClassConverter(MeasureType.VOLUMELITRE);
+         
 
     }
 }

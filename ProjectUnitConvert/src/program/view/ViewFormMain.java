@@ -9,10 +9,13 @@ import java.util.List;
 import program.VisualizeConvertersFiles;
 import converters.ClassInterface.AbstractConverter;
 import java.awt.event.ItemEvent;
+import converters.Enum.MeasureType;
 
 public class ViewFormMain extends javax.swing.JFrame {
-    
+
     private boolean changedOptionJComboBox01 = false;
+    private String typeDescriptionOfTheClass;
+    private String basicUnitDescriptionOfTheClass;
     /**
      * Creates new form Iniciar
      */
@@ -28,13 +31,21 @@ public class ViewFormMain extends javax.swing.JFrame {
             for (String listNameArchive : listWithNamesArchivesInDirectoryConverters) {
 
                 AbstractConverter newInstance = (AbstractConverter) Class.forName(listNameArchive).getConstructor().newInstance();
-                jComboBox01ConvertFrom.addItem(newInstance.getDescriptionClassConverter() + ": " + listNameArchive);
-               
+                List<MeasureType> list = newInstance.getDescriptionClassConverter();
+                
+                for(MeasureType descriptionOfTheClass : list) {
+
+                    typeDescriptionOfTheClass = descriptionOfTheClass.getTypeString();
+                    basicUnitDescriptionOfTheClass = descriptionOfTheClass.getBasicUnit();
+
+                }
+                jComboBox01ConvertFrom.addItem(basicUnitDescriptionOfTheClass+" ["+typeDescriptionOfTheClass+"]: "+listNameArchive);
+
             }
-            
+
             jComboBox01ConvertFrom.setSelectedIndex(-1);
-            changedOptionJComboBox01= true;
-            
+            changedOptionJComboBox01 = true;
+
         } catch (Exception e) {
             // TODO Auto-generated catch block
             System.out.println(e);
@@ -115,13 +126,14 @@ public class ViewFormMain extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void ConvertersIClasstemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ConvertersIClasstemStateChanged
-        
+
         if (evt.getStateChange() == ItemEvent.SELECTED && changedOptionJComboBox01) {
 
             try {
                 jComboBox2To.setEnabled(true);
+                jComboBox2To.removeAllItems();
                 System.out.println("AAA");
-                
+
             } catch (Exception e) {
                 // TODO Auto-generated catch block
                 System.out.println(e);
