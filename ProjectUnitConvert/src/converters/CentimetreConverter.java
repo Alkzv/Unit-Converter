@@ -19,4 +19,8 @@ public class CentimetreConverter extends AbstractConverter {
         super.setDescriptionClassConverter(MeasureType.DISTANCECENTIMETRE);
 
     }
+    
+    public void Teste() {
+        System.out.println("testado");
+    }
 }

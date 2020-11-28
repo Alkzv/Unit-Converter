@@ -43,7 +43,7 @@ public class ViewFormMain extends javax.swing.JFrame {
         jLabelTextTo = new javax.swing.JLabel();
         jTextConverted = new javax.swing.JTextField();
         jComboBox01ConvertFrom = new javax.swing.JComboBox<>();
-        jComboBox2To = new javax.swing.JComboBox<>();
+        jComboBox02ConvertTo = new javax.swing.JComboBox<>();
         jLabelBackground = new javax.swing.JLabel();
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -72,7 +72,7 @@ public class ViewFormMain extends javax.swing.JFrame {
         getContentPane().add(jTextConverted, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 150, 70));
 
         jComboBox01ConvertFrom.setMaximumRowCount(200);
-        jComboBox01ConvertFrom.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jComboBox01ConvertFrom.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jComboBox01ConvertFrom.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 ConvertersIClasstemStateChanged(evt);
@@ -80,10 +80,15 @@ public class ViewFormMain extends javax.swing.JFrame {
         });
         getContentPane().add(jComboBox01ConvertFrom, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 70, 530, 70));
 
-        jComboBox2To.setMaximumRowCount(200);
-        jComboBox2To.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jComboBox2To.setEnabled(false);
-        getContentPane().add(jComboBox2To, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, 530, 70));
+        jComboBox02ConvertTo.setMaximumRowCount(200);
+        jComboBox02ConvertTo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jComboBox02ConvertTo.setEnabled(false);
+        jComboBox02ConvertTo.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBox02ConvertToItemStateChanged(evt);
+            }
+        });
+        getContentPane().add(jComboBox02ConvertTo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, 530, 70));
 
         jLabelBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/FundoView1.png"))); // NOI18N
         getContentPane().add(jLabelBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(-16, 0, 1380, 390));
@@ -100,7 +105,7 @@ public class ViewFormMain extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void FillComboBox(boolean isFirstComboBox, String typeItemSelected, String itemSelected) {
+    private void FillComboBox(boolean isFirstComboBox, String selectedItemType, String selectedItem) {
         try {
             VisualizeConvertersFiles visualizeArchivesConverters = new VisualizeConvertersFiles();
             List<String> listWithNamesArchivesInDirectoryConverters = visualizeArchivesConverters.VisualizeConvertersFiles();
@@ -109,22 +114,21 @@ public class ViewFormMain extends javax.swing.JFrame {
 
                 AbstractConverter newInstance = (AbstractConverter) Class.forName(listNameArchive).getConstructor().newInstance();
                 List<MeasureType> list = newInstance.getDescriptionClassConverter();
-
+                
                 for (MeasureType descriptionOfTheClass : list) {
 
                     typeDescriptionOfTheClass = descriptionOfTheClass.getTypeString();
                     basicUnitDescriptionOfTheClass = descriptionOfTheClass.getBasicUnit();
+                }   
 
-                }
-                
                 String itemJComboBox = basicUnitDescriptionOfTheClass + " [" + typeDescriptionOfTheClass + "]: " + listNameArchive;
                 
                 if (isFirstComboBox) {
                     jComboBox01ConvertFrom.addItem(basicUnitDescriptionOfTheClass + " [" + typeDescriptionOfTheClass + "]: " + listNameArchive);
                 } else {
                     
-                    if (typeItemSelected.equals(typeDescriptionOfTheClass) && !itemJComboBox.equals(itemSelected)) {
-                        jComboBox2To.addItem(basicUnitDescriptionOfTheClass + " [" + typeDescriptionOfTheClass + "]: " + listNameArchive);
+                    if (selectedItemType.equals(typeDescriptionOfTheClass) && !itemJComboBox.equals(selectedItem)) {
+                        jComboBox02ConvertTo.addItem(basicUnitDescriptionOfTheClass + " [" + typeDescriptionOfTheClass + "]: " + listNameArchive);
                     }
                 }
             }
@@ -134,30 +138,30 @@ public class ViewFormMain extends javax.swing.JFrame {
         } catch (Exception e) {
             // TODO Auto-generated catch block
             System.out.println(e);
-
+            
         }
     }
     private void ConvertersIClasstemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ConvertersIClasstemStateChanged
-        System.out.println("teste");
+
         if (evt.getStateChange() == ItemEvent.SELECTED && changedOptionJComboBox01) {
 
             try {
 
-                jComboBox2To.setEnabled(true);
-                jComboBox2To.removeAllItems();
-                String typeItemSelected = jComboBox01ConvertFrom.getSelectedItem().toString().trim();
-                String itemSelected = jComboBox01ConvertFrom.getSelectedItem().toString().trim();
+                jComboBox02ConvertTo.setEnabled(true);
+                jComboBox02ConvertTo.removeAllItems();
+                String selectedItemType = jComboBox01ConvertFrom.getSelectedItem().toString().trim();
+                String selectedItem = jComboBox01ConvertFrom.getSelectedItem().toString().trim();
 
                 String regex = "\\[(.*?)\\]";
                 Pattern p = Pattern.compile(regex);
-                Matcher m = p.matcher(typeItemSelected);
+                Matcher m = p.matcher(selectedItemType);
 
                 while (m.find()) {
 
-                    typeItemSelected = m.group(1);
+                    selectedItemType = m.group(1);
 
                 }
-                this.FillComboBox(false, typeItemSelected, itemSelected);
+                this.FillComboBox(false, selectedItemType, selectedItem);
 
             } catch (Exception e) {
                 // TODO Auto-generated catch block
@@ -167,10 +171,50 @@ public class ViewFormMain extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_ConvertersIClasstemStateChanged
 
+    private void jComboBox02ConvertToItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox02ConvertToItemStateChanged
+        try {
+            String selectedItem = jComboBox02ConvertTo.getSelectedItem().toString().trim();
+            String[] selectedConvertionType = selectedItem.split(": ", 2);
+            System.out.println(selectedConvertionType[1]);
+
+            AbstractConverter newInstance = (AbstractConverter) Class.forName(selectedConvertionType[1]).getConstructor().newInstance();
+            List<MeasureType> list = newInstance.getDescriptionClassConverter();
+
+            for (MeasureType descriptionOfTheClass : list) {
+         
+                typeDescriptionOfTheClass = descriptionOfTheClass.getTypeString();
+                basicUnitDescriptionOfTheClass = descriptionOfTheClass.getBasicUnit();
+            }   
+            
+            Class myClass = Class.forName("MyClass");
+
+            Class[] types = {Double.TYPE, this.getClass()};
+            Constructor constructor = myClass.getConstructor(types);
+            constructor.newInstance(new Double(0), this);
+
+            Object[] parameters = {new Double(0), this};
+            Object instanceOfMyClass = constructor.newInstance(parameters);
+            
+            Object o = Class.forName(selectedConvertionType[1]).newInstance(); 
+            
+            o.convert();
+            
+            System.out.println(o);
+            
+            System.out.println(typeDescriptionOfTheClass);
+            System.out.println(basicUnitDescriptionOfTheClass);
+            
+            
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            System.out.println(e);
+        }
+    }//GEN-LAST:event_jComboBox02ConvertToItemStateChanged
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> jComboBox01ConvertFrom;
-    private javax.swing.JComboBox<String> jComboBox2To;
+    private javax.swing.JComboBox<String> jComboBox02ConvertTo;
     private javax.swing.JLabel jLabelBackground;
     private javax.swing.JLabel jLabelTextConvertFrom;
     private javax.swing.JLabel jLabelTextTo;

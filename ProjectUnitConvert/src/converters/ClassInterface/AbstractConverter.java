@@ -27,9 +27,10 @@ public abstract class AbstractConverter {
         List<MeasureType> list = Arrays.asList(MeasureType.valueOf(nameOfEnumUsedOfTheClass));
         
         return list;
-    
-        }
-   
-
     }
+    
+    public void convert() {
+        
+    }
+}
 
