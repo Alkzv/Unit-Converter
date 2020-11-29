@@ -7,9 +7,10 @@ package converters;
 
 import converters.ClassInterface.AbstractConverter;
 import converters.Enum.MeasureType;
+
 /**
  *
- * @author PC
+ * @author PC-SAFE
  */
 public class SquareMetreConverter extends AbstractConverter {
 
@@ -17,5 +18,15 @@ public class SquareMetreConverter extends AbstractConverter {
 
         super.setDescriptionClassConverter(MeasureType.AREASQUAREMETRE);
 
+    }
+
+    @Override
+    public double toBasicUnit(double valueJTextInsert) {
+        return (100 * valueJTextInsert) / (7140 * 100);// square meters to soccer field 
+    }
+
+    @Override
+    public double fromBasicUnit(double valueJTextInsert) {
+        return (valueJTextInsert) * (7140); // soccer field to square meters;
     }
 }

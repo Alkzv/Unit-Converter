@@ -10,13 +10,23 @@ import converters.Enum.MeasureType;
 
 /**
  *
- * @author PC
+ * @author PC - SAFE
  */
 public class DecimetreConverter extends AbstractConverter {
 
     public DecimetreConverter() {
 
-         super.setDescriptionClassConverter(MeasureType.DISTANCEDECIMETRE);
+        super.setDescriptionClassConverter(MeasureType.DISTANCEDECIMETRE);
 
+    }
+
+    @Override
+    public double toBasicUnit(double valueJTextInsert) {
+        return (valueJTextInsert) * (10); // decimetro para cm
+    }
+
+    @Override
+    public double fromBasicUnit(double valueJTextInsert) {
+        return (100 * valueJTextInsert) / (10 * 100); // cm para decimetro
     }
 }

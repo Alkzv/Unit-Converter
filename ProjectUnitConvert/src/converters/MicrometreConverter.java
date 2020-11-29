@@ -10,14 +10,23 @@ import converters.Enum.MeasureType;
 
 /**
  *
- * @author PC
+ * @author PC - SAFE
  */
 public class MicrometreConverter extends AbstractConverter {
 
     public MicrometreConverter() {
 
         super.setDescriptionClassConverter(MeasureType.DISTANCEMICROMETRE);
-         
 
+    }
+
+    @Override
+    public double toBasicUnit(double valueJTextInsert) {
+        return (100 * valueJTextInsert) / (10000 * 100); // micrometro para cm 
+    }
+
+    @Override
+    public double fromBasicUnit(double valueJTextInsert) {
+        return (valueJTextInsert) * (10000); // cm para micrometro
     }
 }

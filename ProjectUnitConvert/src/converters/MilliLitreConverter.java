@@ -10,14 +10,23 @@ import converters.Enum.MeasureType;
 
 /**
  *
- * @author PC
+ * @author PC - SAFE
  */
 public class MilliLitreConverter extends AbstractConverter {
 
     public MilliLitreConverter() {
 
         super.setDescriptionClassConverter(MeasureType.VOLUMEMILLILITRE);
-         
 
+    }
+
+    @Override
+    public double toBasicUnit(double valueJTextInsert) {
+        return (100*valueJTextInsert)/(1*100); // milliletre to centimetre cubic
+    }
+
+    @Override
+    public double fromBasicUnit(double valueJTextInsert) {
+        return (valueJTextInsert) * (1);//centimetre cubic to milliletre
     }
 }

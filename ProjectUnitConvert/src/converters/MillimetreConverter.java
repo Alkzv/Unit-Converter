@@ -10,14 +10,23 @@ import converters.Enum.MeasureType;
 
 /**
  *
- * @author PC
+ * @author PC - SAFE
  */
 public class MillimetreConverter extends AbstractConverter {
 
     public MillimetreConverter() {
 
-        super.setDescriptionClassConverter(MeasureType.VOLUMEMILLIMETRE);
-         
+        super.setDescriptionClassConverter(MeasureType.DISTANCEMILLIMETRE);
 
+    }
+
+    @Override
+    public double toBasicUnit(double valueJTextInsert) {
+        return (100 * valueJTextInsert) / (10 * 100); // millimetre to centimetre
+    }
+
+    @Override
+    public double fromBasicUnit(double valueJTextInsert) {
+        return (valueJTextInsert) * (10); // centimetre to millimetre
     }
 }

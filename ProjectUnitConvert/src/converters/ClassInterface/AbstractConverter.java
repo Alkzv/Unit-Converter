@@ -16,21 +16,22 @@ import java.util.List;
 public abstract class AbstractConverter {
 
     private String nameOfEnumUsedOfTheClass;
-    
+
     public void setDescriptionClassConverter(Enum descriptionOftheClass) {
-        
+
         this.nameOfEnumUsedOfTheClass = descriptionOftheClass.toString();
     }
+
+    public abstract double toBasicUnit(double unit);
+
+    public abstract double fromBasicUnit(double valueJTextInsert);
 
     public List<MeasureType> getDescriptionClassConverter() {
 
         List<MeasureType> list = Arrays.asList(MeasureType.valueOf(nameOfEnumUsedOfTheClass));
-        
-        return list;
-    }
-    
-    public void convert() {
-        
-    }
-}
 
+        return list;
+
+    }
+
+}

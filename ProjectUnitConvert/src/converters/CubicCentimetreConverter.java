@@ -19,4 +19,14 @@ public class CubicCentimetreConverter extends AbstractConverter {
         super.setDescriptionClassConverter(MeasureType.VOLUMECUBICCENTIMETRE);
 
     }
+
+    @Override
+    public double toBasicUnit(double valueJTextInsert) {
+        return valueJTextInsert;
+    }
+
+    @Override
+    public double fromBasicUnit(double valueJTextInsert) {
+        return valueJTextInsert;
+    }
 }

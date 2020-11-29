@@ -10,14 +10,23 @@ import converters.Enum.MeasureType;
 
 /**
  *
- * @author PC
+ * @author PC - SAFE
  */
 public class HectometreConverter extends AbstractConverter {
 
     public HectometreConverter() {
 
         super.setDescriptionClassConverter(MeasureType.DISTANCEHECTOMETRE);
-         
 
+    }
+
+    @Override
+    public double toBasicUnit(double valueJTextInsert) {
+        return (valueJTextInsert) * (10000);//hectometro para cm
+    }
+
+    @Override
+    public double fromBasicUnit(double valueJTextInsert) {
+        return (100 * valueJTextInsert) / (10000 * 100);//cm para hectometre
     }
 }

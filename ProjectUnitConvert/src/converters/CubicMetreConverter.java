@@ -10,13 +10,23 @@ import converters.Enum.MeasureType;
 
 /**
  *
- * @author PC
+ * @author PC - SAFE
  */
 public class CubicMetreConverter extends AbstractConverter {
 
     public CubicMetreConverter() {
 
-         super.setDescriptionClassConverter(MeasureType.VOLUMECUBICMETRE);
+        super.setDescriptionClassConverter(MeasureType.VOLUMECUBICMETRE);
 
+    }
+
+    @Override
+    public double toBasicUnit(double valueJTextInsert) {
+        return (valueJTextInsert) * (1000000); // cubic metre to cubic centimetre
+    }
+
+    @Override
+    public double fromBasicUnit(double valueJTextInsert) {
+        return (100 * valueJTextInsert) / (1000000 * 100);// cubic centimetre to cubic metre 
     }
 }

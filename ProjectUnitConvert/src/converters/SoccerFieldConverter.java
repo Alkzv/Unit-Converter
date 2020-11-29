@@ -17,7 +17,16 @@ public class SoccerFieldConverter extends AbstractConverter {
     public SoccerFieldConverter() {
 
         super.setDescriptionClassConverter(MeasureType.AREASOCCERFIELD);
-         
 
+    }
+
+    @Override
+    public double toBasicUnit(double valueJTextInsert) {
+        return valueJTextInsert;
+    }
+
+    @Override
+    public double fromBasicUnit(double valueJTextInsert) {
+        return valueJTextInsert;
     }
 }

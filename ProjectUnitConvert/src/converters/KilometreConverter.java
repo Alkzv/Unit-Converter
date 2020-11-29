@@ -10,14 +10,23 @@ import converters.Enum.MeasureType;
 
 /**
  *
- * @author PC
+ * @author PC - SAFE
  */
 public class KilometreConverter extends AbstractConverter {
 
     public KilometreConverter() {
 
         super.setDescriptionClassConverter(MeasureType.DISTANCEKILOMETRE);
-         
 
+    }
+
+    @Override
+    public double toBasicUnit(double valueJTextInsert) {
+        return (valueJTextInsert) * (100000); // km para cm
+    }
+
+    @Override
+    public double fromBasicUnit(double valueJTextInsert) {
+        return (100 * valueJTextInsert) / (100000 * 100); //cm para km 
     }
 }

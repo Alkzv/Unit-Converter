@@ -10,14 +10,23 @@ import converters.Enum.MeasureType;
 
 /**
  *
- * @author PC
+ * @author PC - SAFE
  */
 public class MetreConverter extends AbstractConverter {
 
     public MetreConverter() {
 
         super.setDescriptionClassConverter(MeasureType.DISTANCEMETRE);
-         
 
+    }
+
+    @Override
+    public double toBasicUnit(double valueJTextInsert) {
+        return (valueJTextInsert) * (100);// Metre to cm
+    }
+
+    @Override
+    public double fromBasicUnit(double valueJTextInsert) {
+        return (100 * valueJTextInsert) / (100 * 100); //Cm to Metre 
     }
 }
