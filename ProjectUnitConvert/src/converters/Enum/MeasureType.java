@@ -10,10 +10,10 @@ package converters.Enum;
  * @author PC
  */
 public enum MeasureType {
-    
+
     DISTANCECENTIMETRE("distance", "centimetre(cm)"),
-    VOLUMECUBICCENTIMETRE("volume","cubic centimetre (cm³)"),
-    VOLUMECUBICMETRE("volume","cubic metre (cm³)"),
+    VOLUMECUBICCENTIMETRE("volume", "cubic centimetre (cm³)"),
+    VOLUMECUBICMETRE("volume", "cubic metre (cm³)"),
     DISTANCEDECAMETRE("distance", "decametre (dam)"),
     DISTANCEDECIMETRE("distance", "decimetre (dm)"),
     DISTANCEHECTOMETRE("distance", "hectometre (hm)"),
@@ -38,7 +38,7 @@ public enum MeasureType {
     ENERGY("energy", "joule (J)"),
     POWER("power", "watt (W)"),
     VISCOSITY("viscosity", "Pa·s");
-    
+
     private String type;
     private String basicUnit;
 

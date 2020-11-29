@@ -17,7 +17,16 @@ public class InchConverter extends AbstractConverter {
     public InchConverter() {
 
         super.setDescriptionClassConverter(MeasureType.DISTANCEINCH);
-         
 
+    }
+
+    @Override
+    public double toBasicUnit(double valueJTextInsert) {
+        return valueJTextInsert*2.54; // inch para cm
+    }
+
+    @Override
+    public double fromBasicUnit(double valueJTextInsert) {
+        return valueJTextInsert/2.54; // cm para inch
     }
 }

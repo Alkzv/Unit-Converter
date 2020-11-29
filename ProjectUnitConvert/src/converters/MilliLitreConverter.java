@@ -17,7 +17,16 @@ public class MilliLitreConverter extends AbstractConverter {
     public MilliLitreConverter() {
 
         super.setDescriptionClassConverter(MeasureType.VOLUMEMILLILITRE);
-         
 
+    }
+
+    @Override
+    public double toBasicUnit(double valueJTextInsert) {
+        return valueJTextInsert*1; // milliletre to centimetre cubic
+    }
+
+    @Override
+    public double fromBasicUnit(double valueJTextInsert) {
+       return valueJTextInsert*1;//centimetre cubic to milliletre
     }
 }

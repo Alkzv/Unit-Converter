@@ -19,4 +19,15 @@ public class CentimetreConverter extends AbstractConverter {
         super.setDescriptionClassConverter(MeasureType.DISTANCECENTIMETRE);
 
     }
+
+    @Override
+    public double toBasicUnit(double valueJTextInsert) {
+
+        return valueJTextInsert;
+    }
+
+    @Override
+    public double fromBasicUnit(double valueJTextInsert) {
+        return valueJTextInsert;
+    }
 }

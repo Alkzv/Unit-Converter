@@ -8,10 +8,12 @@ package program.view;
 import java.util.List;
 import program.VisualizeConvertersFiles;
 import converters.ClassInterface.AbstractConverter;
+import program.ConversionsCalculations;
 import java.awt.event.ItemEvent;
 import converters.Enum.MeasureType;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import javax.swing.JOptionPane;
 
 public class ViewFormMain extends javax.swing.JFrame {
 
@@ -25,7 +27,7 @@ public class ViewFormMain extends javax.swing.JFrame {
     public ViewFormMain() {
 
         initComponents();
-        this.FillComboBox(true, "","");
+        this.FillComboBox(true, "", "");
         jComboBox01ConvertFrom.setSelectedIndex(-1);
     }
 
@@ -43,10 +45,11 @@ public class ViewFormMain extends javax.swing.JFrame {
         jLabelTextTo = new javax.swing.JLabel();
         jTextConverted = new javax.swing.JTextField();
         jComboBox01ConvertFrom = new javax.swing.JComboBox<>();
-        jComboBox2To = new javax.swing.JComboBox<>();
+        jComboBox02To = new javax.swing.JComboBox<>();
         jLabelBackground = new javax.swing.JLabel();
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -56,39 +59,59 @@ public class ViewFormMain extends javax.swing.JFrame {
         jLabelTextConvertFrom.setBackground(new java.awt.Color(255, 255, 255));
         jLabelTextConvertFrom.setFont(new java.awt.Font("Calibri", 1, 22)); // NOI18N
         jLabelTextConvertFrom.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelTextConvertFrom.setText("Convert from");
-        getContentPane().add(jLabelTextConvertFrom, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 140, 100));
+        jLabelTextConvertFrom.setText(" Convert from");
+        jLabelTextConvertFrom.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        getContentPane().add(jLabelTextConvertFrom, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 140, 70));
 
+        jTextInsert.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242)));
         jTextInsert.setDoubleBuffered(true);
+        jTextInsert.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextInsertKeyPressed(evt);
+            }
+        });
         getContentPane().add(jTextInsert, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, 150, 70));
 
         jLabelTextTo.setFont(new java.awt.Font("Calibri", 1, 22)); // NOI18N
         jLabelTextTo.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelTextTo.setText("To");
-        getContentPane().add(jLabelTextTo, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, -1, -1));
+        jLabelTextTo.setText("           To           ");
+        jLabelTextTo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        getContentPane().add(jLabelTextTo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, 70));
 
         jTextConverted.setEditable(false);
         jTextConverted.setBackground(new java.awt.Color(204, 204, 204));
+        jTextConverted.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242)));
         getContentPane().add(jTextConverted, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 150, 70));
 
         jComboBox01ConvertFrom.setMaximumRowCount(200);
+        jComboBox01ConvertFrom.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242)));
         jComboBox01ConvertFrom.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jComboBox01ConvertFrom.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 ConvertersIClasstemStateChanged(evt);
             }
         });
-        getContentPane().add(jComboBox01ConvertFrom, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 70, 530, 70));
+        getContentPane().add(jComboBox01ConvertFrom, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 70, 530, 70));
 
-        jComboBox2To.setMaximumRowCount(200);
-        jComboBox2To.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jComboBox2To.setEnabled(false);
-        getContentPane().add(jComboBox2To, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, 530, 70));
+        jComboBox02To.setMaximumRowCount(200);
+        jComboBox02To.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242)));
+        jComboBox02To.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jComboBox02To.setEnabled(false);
+        jComboBox02To.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBox02ToItemStateChanged(evt);
+            }
+        });
+        getContentPane().add(jComboBox02To, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, 530, 70));
 
         jLabelBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/FundoView1.png"))); // NOI18N
         getContentPane().add(jLabelBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(-16, 0, 1380, 390));
 
         jMenu1.setText("File");
+
+        jMenuItem1.setText("Exit");
+        jMenu1.add(jMenuItem1);
+
         jMenuBar2.add(jMenu1);
 
         jMenu2.setText("Help");
@@ -96,12 +119,13 @@ public class ViewFormMain extends javax.swing.JFrame {
 
         setJMenuBar(jMenuBar2);
 
-        setSize(new java.awt.Dimension(1061, 402));
+        setSize(new java.awt.Dimension(984, 402));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void FillComboBox(boolean isFirstComboBox, String typeItemSelected, String itemSelected) {
         try {
+
             VisualizeConvertersFiles visualizeArchivesConverters = new VisualizeConvertersFiles();
             List<String> listWithNamesArchivesInDirectoryConverters = visualizeArchivesConverters.VisualizeConvertersFiles();
 
@@ -116,17 +140,21 @@ public class ViewFormMain extends javax.swing.JFrame {
                     basicUnitDescriptionOfTheClass = descriptionOfTheClass.getBasicUnit();
 
                 }
-                
+
                 String itemJComboBox = basicUnitDescriptionOfTheClass + " [" + typeDescriptionOfTheClass + "]: " + listNameArchive;
-                
+
                 if (isFirstComboBox) {
+
                     jComboBox01ConvertFrom.addItem(basicUnitDescriptionOfTheClass + " [" + typeDescriptionOfTheClass + "]: " + listNameArchive);
+
                 } else {
-                    
+
                     if (typeItemSelected.equals(typeDescriptionOfTheClass) && !itemJComboBox.equals(itemSelected)) {
-                        jComboBox2To.addItem(basicUnitDescriptionOfTheClass + " [" + typeDescriptionOfTheClass + "]: " + listNameArchive);
+
+                        jComboBox02To.addItem(basicUnitDescriptionOfTheClass + " [" + typeDescriptionOfTheClass + "]: " + listNameArchive);
+
                     }
-                    
+
                 }
             }
 
@@ -144,11 +172,10 @@ public class ViewFormMain extends javax.swing.JFrame {
 
             try {
 
-                jComboBox2To.setEnabled(true);
-                jComboBox2To.removeAllItems();
+                jComboBox02To.setEnabled(true);
+                jComboBox02To.removeAllItems();
                 String typeItemSelected = jComboBox01ConvertFrom.getSelectedItem().toString().trim();
                 String itemSelected = jComboBox01ConvertFrom.getSelectedItem().toString().trim();
-
                 String regex = "\\[(.*?)\\]";
                 Pattern p = Pattern.compile(regex);
                 Matcher m = p.matcher(typeItemSelected);
@@ -158,6 +185,7 @@ public class ViewFormMain extends javax.swing.JFrame {
                     typeItemSelected = m.group(1);
 
                 }
+
                 this.FillComboBox(false, typeItemSelected, itemSelected);
 
             } catch (Exception e) {
@@ -168,16 +196,51 @@ public class ViewFormMain extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_ConvertersIClasstemStateChanged
 
+    private void jComboBox02ToItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox02ToItemStateChanged
+        if (evt.getStateChange() == ItemEvent.SELECTED || jComboBox02To.getSelectedIndex() >= 0 || jComboBox02To.getSelectedItem() != null) {
+
+            try {
+
+                if (!jTextInsert.getText().trim().isEmpty()) {
+
+                    String valueJComboBox01ConvertFrom = jComboBox01ConvertFrom.getSelectedItem().toString().trim();
+                    String valueJComboBox02To = jComboBox02To.getSelectedItem().toString().trim();
+                    String valueJTextInsert = jTextInsert.getText().trim();
+                    valueJTextInsert.replaceAll(",", ".");
+                    double valueJTextInsertInDouble = Double.parseDouble(valueJTextInsert);
+                    ConversionsCalculations conversionsCalculations = new ConversionsCalculations(valueJComboBox01ConvertFrom, valueJComboBox02To, valueJTextInsertInDouble);
+                    double valueConversion = conversionsCalculations.Conversions();
+                    String valueConversionInString = Double.toString(valueConversion);
+                    jTextConverted.setText(valueConversionInString);
+
+                } else {
+
+                    JOptionPane.showMessageDialog(null, "Please first fill in the number (in the field in front of the Convert From text) that you want to be converted!");
+
+                }
+            } catch (Exception e) {
+
+                System.out.println(e);
+
+            }
+        }
+    }//GEN-LAST:event_jComboBox02ToItemStateChanged
+
+    private void jTextInsertKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextInsertKeyPressed
+
+    }//GEN-LAST:event_jTextInsertKeyPressed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> jComboBox01ConvertFrom;
-    private javax.swing.JComboBox<String> jComboBox2To;
+    private javax.swing.JComboBox<String> jComboBox02To;
     private javax.swing.JLabel jLabelBackground;
     private javax.swing.JLabel jLabelTextConvertFrom;
     private javax.swing.JLabel jLabelTextTo;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar2;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JTextField jTextConverted;
     private javax.swing.JTextField jTextInsert;
     // End of variables declaration//GEN-END:variables

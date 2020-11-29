@@ -17,7 +17,16 @@ public class MillimetreConverter extends AbstractConverter {
     public MillimetreConverter() {
 
         super.setDescriptionClassConverter(MeasureType.VOLUMEMILLIMETRE);
-         
 
+    }
+
+    @Override
+    public double toBasicUnit(double valueJTextInsert) {
+        return valueJTextInsert/1000; // millimetre to cubic centimetre
+    }
+
+    @Override
+    public double fromBasicUnit(double valueJTextInsert) {
+        return valueJTextInsert*1000; // cubic centimetre to millimetre
     }
 }

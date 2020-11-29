@@ -16,7 +16,17 @@ public class DecimetreConverter extends AbstractConverter {
 
     public DecimetreConverter() {
 
-         super.setDescriptionClassConverter(MeasureType.DISTANCEDECIMETRE);
+        super.setDescriptionClassConverter(MeasureType.DISTANCEDECIMETRE);
 
+    }
+
+    @Override
+    public double toBasicUnit(double valueJTextInsert) {
+        return valueJTextInsert*10; // decimetro para cm
+    }
+
+    @Override
+    public double fromBasicUnit(double valueJTextInsert) {
+        return valueJTextInsert/10; // cm para decimetro
     }
 }

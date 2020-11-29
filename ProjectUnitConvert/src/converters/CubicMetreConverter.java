@@ -16,7 +16,17 @@ public class CubicMetreConverter extends AbstractConverter {
 
     public CubicMetreConverter() {
 
-         super.setDescriptionClassConverter(MeasureType.VOLUMECUBICMETRE);
+        super.setDescriptionClassConverter(MeasureType.VOLUMECUBICMETRE);
 
+    }
+
+    @Override
+    public double toBasicUnit(double valueJTextInsert) {
+        return valueJTextInsert*0.000001; // cubic metre to cubic centimetre
+    }
+
+    @Override
+    public double fromBasicUnit(double valueJTextInsert) {
+        return valueJTextInsert/0.000001;// cubic centimetre to cubic metre 
     }
 }

@@ -10,14 +10,23 @@ import converters.Enum.MeasureType;
 
 /**
  *
- * @author PC
+ * @author PC - SAFE
  */
 public class YardConverter extends AbstractConverter {
 
     public YardConverter() {
 
         super.setDescriptionClassConverter(MeasureType.DISTANCEYARD);
-         
 
+    }
+
+    @Override
+    public double toBasicUnit(double valueJTextInsert) {
+        return valueJTextInsert*91.44; // jarda para cm
+    }
+
+    @Override
+    public double fromBasicUnit(double valueJTextInsert) {
+        return valueJTextInsert/91.44;// cm para jarda;
     }
 }

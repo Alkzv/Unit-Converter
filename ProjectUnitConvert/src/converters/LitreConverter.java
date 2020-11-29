@@ -17,7 +17,16 @@ public class LitreConverter extends AbstractConverter {
     public LitreConverter() {
 
         super.setDescriptionClassConverter(MeasureType.VOLUMELITRE);
-         
 
+    }
+
+    @Override
+    public double toBasicUnit(double valueJTextInsert) {
+        return valueJTextInsert*1000;// litre to centimetre cubic 
+    }
+
+    @Override
+    public double fromBasicUnit(double valueJTextInsert) {
+        return valueJTextInsert/1000;// centimetre cubic to litre
     }
 }

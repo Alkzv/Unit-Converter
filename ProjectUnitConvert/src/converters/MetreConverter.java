@@ -17,7 +17,16 @@ public class MetreConverter extends AbstractConverter {
     public MetreConverter() {
 
         super.setDescriptionClassConverter(MeasureType.DISTANCEMETRE);
-         
 
+    }
+
+    @Override
+    public double toBasicUnit(double valueJTextInsert) {
+        return valueJTextInsert*100;// Metre to cm
+    }
+
+    @Override
+    public double fromBasicUnit(double valueJTextInsert) {
+        return valueJTextInsert/100; //Cm to Metre 
     }
 }

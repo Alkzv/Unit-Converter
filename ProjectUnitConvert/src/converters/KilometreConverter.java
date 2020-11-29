@@ -17,7 +17,16 @@ public class KilometreConverter extends AbstractConverter {
     public KilometreConverter() {
 
         super.setDescriptionClassConverter(MeasureType.DISTANCEKILOMETRE);
-         
 
+    }
+
+    @Override
+    public double toBasicUnit(double valueJTextInsert) {
+        return valueJTextInsert*100000; // km para cm
+    }
+
+    @Override
+    public double fromBasicUnit(double valueJTextInsert) {
+        return valueJTextInsert/100000; //cm para km 
     }
 }
