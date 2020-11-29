@@ -59,10 +59,11 @@ public class ViewFormMain extends javax.swing.JFrame {
         jLabelTextConvertFrom.setBackground(new java.awt.Color(255, 255, 255));
         jLabelTextConvertFrom.setFont(new java.awt.Font("Calibri", 1, 22)); // NOI18N
         jLabelTextConvertFrom.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelTextConvertFrom.setText(" Convert from");
+        jLabelTextConvertFrom.setText("  CONVERT FROM");
         jLabelTextConvertFrom.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        getContentPane().add(jLabelTextConvertFrom, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 140, 70));
+        getContentPane().add(jLabelTextConvertFrom, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 170, 70));
 
+        jTextInsert.setFont(new java.awt.Font("Calibri", 1, 16)); // NOI18N
         jTextInsert.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242)));
         jTextInsert.setDoubleBuffered(true);
         jTextInsert.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -70,19 +71,22 @@ public class ViewFormMain extends javax.swing.JFrame {
                 jTextInsertKeyPressed(evt);
             }
         });
-        getContentPane().add(jTextInsert, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, 150, 70));
+        getContentPane().add(jTextInsert, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, 150, 70));
 
         jLabelTextTo.setFont(new java.awt.Font("Calibri", 1, 22)); // NOI18N
         jLabelTextTo.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelTextTo.setText("           To           ");
+        jLabelTextTo.setText("              TO           ");
         jLabelTextTo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(jLabelTextTo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, 70));
+        getContentPane().add(jLabelTextTo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 170, 70));
 
         jTextConverted.setEditable(false);
         jTextConverted.setBackground(new java.awt.Color(204, 204, 204));
+        jTextConverted.setFont(new java.awt.Font("Calibri", 1, 16)); // NOI18N
         jTextConverted.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242)));
-        getContentPane().add(jTextConverted, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 150, 70));
+        jTextConverted.setSelectionColor(new java.awt.Color(0, 102, 255));
+        getContentPane().add(jTextConverted, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, 150, 70));
 
+        jComboBox01ConvertFrom.setFont(new java.awt.Font("Calibri", 1, 16)); // NOI18N
         jComboBox01ConvertFrom.setMaximumRowCount(200);
         jComboBox01ConvertFrom.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242)));
         jComboBox01ConvertFrom.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -93,6 +97,7 @@ public class ViewFormMain extends javax.swing.JFrame {
         });
         getContentPane().add(jComboBox01ConvertFrom, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 70, 530, 70));
 
+        jComboBox02To.setFont(new java.awt.Font("Calibri", 1, 16)); // NOI18N
         jComboBox02To.setMaximumRowCount(200);
         jComboBox02To.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242)));
         jComboBox02To.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -109,6 +114,7 @@ public class ViewFormMain extends javax.swing.JFrame {
 
         jMenu1.setText("File");
 
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/shut-down.png"))); // NOI18N
         jMenuItem1.setText("Exit");
         jMenu1.add(jMenuItem1);
 

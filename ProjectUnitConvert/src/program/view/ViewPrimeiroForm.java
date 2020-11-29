@@ -45,7 +45,8 @@ public class ViewPrimeiroForm extends javax.swing.JFrame {
         jButtonEntrar.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         jButtonEntrar.setForeground(new java.awt.Color(13, 130, 203));
         jButtonEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/com.ep.simpleconvert.jpg"))); // NOI18N
-        jButtonEntrar.setText("Enter");
+        jButtonEntrar.setText("ENTER");
+        jButtonEntrar.setActionCommand("ENTER");
         jButtonEntrar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonEntrar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jButtonEntrar.addActionListener(new java.awt.event.ActionListener() {
