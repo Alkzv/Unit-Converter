@@ -10,7 +10,7 @@ import converters.Enum.MeasureType;
 
 /**
  *
- * @author PC-SAFE
+ * @author PC - SAFE
  */
 public class NanometreConverter extends AbstractConverter {
 
@@ -22,11 +22,11 @@ public class NanometreConverter extends AbstractConverter {
 
     @Override
     public double toBasicUnit(double valueJTextInsert) {
-        return valueJTextInsert/0.0000001;// nanometro to cm
+        return (100 * valueJTextInsert) / (10000000 * 100);// nanometro to cm
     }
 
     @Override
     public double fromBasicUnit(double valueJTextInsert) {
-        return valueJTextInsert*0.0000001;// cm to nanometro
+        return (valueJTextInsert) * (10000000);// cm to nanometro
     }
 }

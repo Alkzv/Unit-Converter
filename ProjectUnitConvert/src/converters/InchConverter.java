@@ -10,7 +10,7 @@ import converters.Enum.MeasureType;
 
 /**
  *
- * @author PC
+ * @author PC - SAFE
  */
 public class InchConverter extends AbstractConverter {
 
@@ -22,11 +22,11 @@ public class InchConverter extends AbstractConverter {
 
     @Override
     public double toBasicUnit(double valueJTextInsert) {
-        return valueJTextInsert*2.54; // inch para cm
+        return (valueJTextInsert) * (2.54); // inch para cm
     }
 
     @Override
     public double fromBasicUnit(double valueJTextInsert) {
-        return valueJTextInsert/2.54; // cm para inch
+        return (100 * valueJTextInsert) / (100 * 2.54); // cm para inch
     }
 }

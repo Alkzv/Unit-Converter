@@ -10,7 +10,7 @@ import converters.Enum.MeasureType;
 
 /**
  *
- * @author PC
+ * @author PC - SAFE
  */
 public class LitreConverter extends AbstractConverter {
 
@@ -22,11 +22,11 @@ public class LitreConverter extends AbstractConverter {
 
     @Override
     public double toBasicUnit(double valueJTextInsert) {
-        return valueJTextInsert*1000;// litre to centimetre cubic 
+        return (valueJTextInsert) * (1000);// litre to centimetre cubic 
     }
 
     @Override
     public double fromBasicUnit(double valueJTextInsert) {
-        return valueJTextInsert/1000;// centimetre cubic to litre
+        return (100 * valueJTextInsert) / (1000 * 100);// centimetre cubic to litre
     }
 }

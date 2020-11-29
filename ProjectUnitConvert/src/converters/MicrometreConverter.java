@@ -22,11 +22,11 @@ public class MicrometreConverter extends AbstractConverter {
 
     @Override
     public double toBasicUnit(double valueJTextInsert) {
-        return valueJTextInsert/10000; // micrometro para cm 
+        return (100 * valueJTextInsert) / (10000 * 100); // micrometro para cm 
     }
 
     @Override
     public double fromBasicUnit(double valueJTextInsert) {
-        return valueJTextInsert*10000; // cm para micrometro
+        return (valueJTextInsert) * (10000); // cm para micrometro
     }
 }

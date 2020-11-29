@@ -23,7 +23,7 @@ public enum MeasureType {
     DISTANCEMETRE("distance", "metre (m)"),
     DISTANCEMICROMETRE("distance", "micrometre (μm)"),
     VOLUMEMILLILITRE("volume", "millilitre (ml)"),
-    VOLUMEMILLIMETRE("volume", "millimetre (mm)"),
+    DISTANCEMILLIMETRE("distance", "millimetre (mm)"),
     DISTANCENANOMETRE("distance", "nanometre (nm)"),
     AREASOCCERFIELD("area", "soccer field (FIFA) (--)"),
     AREASQUAREMETRE("area", "square metre (m²)"),

@@ -10,7 +10,7 @@ import converters.Enum.MeasureType;
 
 /**
  *
- * @author PC
+ * @author PC-SAFE
  */
 public class SquareMetreConverter extends AbstractConverter {
 
@@ -22,11 +22,11 @@ public class SquareMetreConverter extends AbstractConverter {
 
     @Override
     public double toBasicUnit(double valueJTextInsert) {
-        return valueJTextInsert/7140;// square meters to soccer field 
+        return (100 * valueJTextInsert) / (7140 * 100);// square meters to soccer field 
     }
 
     @Override
     public double fromBasicUnit(double valueJTextInsert) {
-        return valueJTextInsert*7140; // soccer field to square meters;
+        return (valueJTextInsert) * (7140); // soccer field to square meters;
     }
 }

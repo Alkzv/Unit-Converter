@@ -22,11 +22,11 @@ public class YardConverter extends AbstractConverter {
 
     @Override
     public double toBasicUnit(double valueJTextInsert) {
-        return valueJTextInsert*91.44; // jarda para cm
+        return (valueJTextInsert) * (91.44); // yard to cm
     }
 
     @Override
     public double fromBasicUnit(double valueJTextInsert) {
-        return valueJTextInsert/91.44;// cm para jarda;
+        return (100 * valueJTextInsert) / (91.44 * 100);// cm to yard;
     }
 }

@@ -10,7 +10,7 @@ import converters.Enum.MeasureType;
 
 /**
  *
- * @author PC
+ * @author PC - SAFE
  */
 public class DecametreConverter extends AbstractConverter {
 
@@ -22,11 +22,11 @@ public class DecametreConverter extends AbstractConverter {
 
     @Override
     public double toBasicUnit(double valueJTextInsert) {
-        return valueJTextInsert*1000; // Decametro to Cm 
+        return (valueJTextInsert) * (1000); // Decametro to Cm 
     }
 
     @Override
     public double fromBasicUnit(double valueJTextInsert) {
-        return valueJTextInsert/1000; // Cm to Decametre
+        return (valueJTextInsert * 100) / (1000 * 100); // Cm to Decametre
     }
 }

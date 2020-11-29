@@ -10,7 +10,7 @@ import converters.Enum.MeasureType;
 
 /**
  *
- * @author PC
+ * @author PC - SAFE
  */
 public class HectometreConverter extends AbstractConverter {
 
@@ -22,11 +22,11 @@ public class HectometreConverter extends AbstractConverter {
 
     @Override
     public double toBasicUnit(double valueJTextInsert) {
-        return valueJTextInsert*10000;//hectometro para cm
+        return (valueJTextInsert) * (10000);//hectometro para cm
     }
 
     @Override
     public double fromBasicUnit(double valueJTextInsert) {
-        return valueJTextInsert/10000;//cm para hectometre
+        return (100 * valueJTextInsert) / (10000 * 100);//cm para hectometre
     }
 }
