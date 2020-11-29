@@ -2,6 +2,7 @@ package program;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -31,11 +32,12 @@ public class VisualizeConvertersFiles {
 
                 fileNameWithOutExt = archive.getName().replaceFirst("[.][^.]+$", "");
                 namesOfTheArchives.add("converters." + fileNameWithOutExt);
-
+                
             }
 
         }
-
+        
+        Collections.sort(namesOfTheArchives);
         return namesOfTheArchives;
     }
 }

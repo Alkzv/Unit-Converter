@@ -11,6 +11,7 @@ import converters.ClassInterface.AbstractConverter;
 import program.ConversionsCalculations;
 import java.awt.event.ItemEvent;
 import converters.Enum.MeasureType;
+import java.awt.event.KeyEvent;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
@@ -212,7 +213,7 @@ public class ViewFormMain extends javax.swing.JFrame {
                     String valueJComboBox01ConvertFrom = jComboBox01ConvertFrom.getSelectedItem().toString().trim();
                     String valueJComboBox02To = jComboBox02To.getSelectedItem().toString().trim();
                     String valueJTextInsert = jTextInsert.getText().trim();
-                    valueJTextInsert.replaceAll(",", ".");
+                    valueJTextInsert = valueJTextInsert.replaceAll(",", ".");
                     double valueJTextInsertInDouble = Double.parseDouble(valueJTextInsert);
                     ConversionsCalculations conversionsCalculations = new ConversionsCalculations(valueJComboBox01ConvertFrom, valueJComboBox02To, valueJTextInsertInDouble);
                     double valueConversion = conversionsCalculations.Conversions();
@@ -233,7 +234,51 @@ public class ViewFormMain extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox02ToItemStateChanged
 
     private void jTextInsertKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextInsertKeyPressed
+        if (jComboBox02To.getSelectedIndex() >= 0 && !jComboBox02To.getSelectedItem().toString().isEmpty()) {
 
+            try {
+
+                String jTextInsertWithoutSpaces = "";
+
+                char keyInserted = evt.getKeyChar();
+
+                jTextInsertWithoutSpaces = jTextInsert.getText();
+
+                if (evt.getKeyCode() == evt.VK_BACK_SPACE || evt.getKeyCode() == evt.VK_DELETE) {
+                    
+                    if (jTextInsertWithoutSpaces .length() > 0) {
+                        jTextInsertWithoutSpaces  = jTextInsertWithoutSpaces .substring(0, jTextInsertWithoutSpaces .length() - 1);
+                    }
+                } else {
+
+                    jTextInsertWithoutSpaces = jTextInsertWithoutSpaces + keyInserted;
+
+                }
+
+                jTextInsertWithoutSpaces = jTextInsertWithoutSpaces.replace(" ", " ");
+
+                int numberCaracteresjTextInsertWithoutSpaces = jTextInsertWithoutSpaces.length();
+
+                if (numberCaracteresjTextInsertWithoutSpaces > 0) {
+
+                    String valueJComboBox01ConvertFrom = jComboBox01ConvertFrom.getSelectedItem().toString().trim();
+                    String valueJComboBox02To = jComboBox02To.getSelectedItem().toString().trim();
+                    jTextInsertWithoutSpaces = jTextInsertWithoutSpaces.replaceAll(",", ".");
+                    double valueJTextInsertInDouble = Double.parseDouble(jTextInsertWithoutSpaces);
+                    ConversionsCalculations conversionsCalculations = new ConversionsCalculations(valueJComboBox01ConvertFrom, valueJComboBox02To, valueJTextInsertInDouble);
+                    double valueConversion = conversionsCalculations.Conversions();
+                    String valueConversionInString = Double.toString(valueConversion);
+                    jTextConverted.setText(valueConversionInString);
+
+                }else{
+                    jTextConverted.setText("");
+                }
+                    
+
+            } catch (Exception e) {
+
+            }
+        }
     }//GEN-LAST:event_jTextInsertKeyPressed
 
 
