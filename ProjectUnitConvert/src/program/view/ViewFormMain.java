@@ -15,12 +15,13 @@ import java.awt.event.KeyEvent;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
+
 /**
- * 
+ *
  * @author Lucas Alkimim Chaves
  */
 public class ViewFormMain extends javax.swing.JFrame {
-    
+
     private boolean changedOptionJComboBox01 = false;
     private String typeDescriptionOfTheClass;
     private String basicUnitDescriptionOfTheClass;
@@ -29,7 +30,7 @@ public class ViewFormMain extends javax.swing.JFrame {
      * Creates new form Iniciar
      */
     public ViewFormMain() {
-        
+
         initComponents();
         this.FillComboBox(true, "", "");
         jComboBox01ConvertFrom.setSelectedIndex(-1);
@@ -171,54 +172,54 @@ public class ViewFormMain extends javax.swing.JFrame {
 
     private void FillComboBox(boolean isFirstComboBox, String typeItemSelected, String itemSelected) {
         try {
-            
+
             VisualizeConvertersFiles visualizeArchivesConverters = new VisualizeConvertersFiles();
             List<String> listWithNamesArchivesInDirectoryConverters = visualizeArchivesConverters.VisualizeConvertersFiles();
-            
+
             for (String listNameArchive : listWithNamesArchivesInDirectoryConverters) {
-                
+
                 AbstractConverter newInstance = (AbstractConverter) Class.forName(listNameArchive).getConstructor().newInstance();
                 List<MeasureType> list = newInstance.getDescriptionClassConverter();
-                
+
                 for (MeasureType descriptionOfTheClass : list) {
-                    
+
                     typeDescriptionOfTheClass = descriptionOfTheClass.getTypeString();
                     basicUnitDescriptionOfTheClass = descriptionOfTheClass.getBasicUnit();
-                    
+
                 }
-                
+
                 String itemJComboBox = basicUnitDescriptionOfTheClass + " [" + typeDescriptionOfTheClass + "]: " + listNameArchive;
-                
+
                 if (isFirstComboBox) {
-                    
+
                     jComboBox01ConvertFrom.addItem(basicUnitDescriptionOfTheClass + " [" + typeDescriptionOfTheClass + "]: " + listNameArchive);
-                    
+
                 } else {
-                    
+
                     if (typeItemSelected.equals(typeDescriptionOfTheClass) && !itemJComboBox.equals(itemSelected)) {
-                        
+
                         jComboBox02To.addItem(basicUnitDescriptionOfTheClass + " [" + typeDescriptionOfTheClass + "]: " + listNameArchive);
-                        
+
                     }
-                    
+
                 }
             }
-            
+
             changedOptionJComboBox01 = true;
-            
+
         } catch (Exception e) {
             // TODO Auto-generated catch block
             System.out.println(e);
-            
+
         }
     }
-    
+
     private void ConvertersIClasstemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ConvertersIClasstemStateChanged
-        
+
         if (evt.getStateChange() == ItemEvent.SELECTED && changedOptionJComboBox01) {
-            
+
             try {
-                
+
                 jComboBox02To.setEnabled(true);
                 jComboBox02To.removeAllItems();
                 String typeItemSelected = jComboBox01ConvertFrom.getSelectedItem().toString().trim();
@@ -226,30 +227,30 @@ public class ViewFormMain extends javax.swing.JFrame {
                 String regex = "\\[(.*?)\\]";
                 Pattern p = Pattern.compile(regex);
                 Matcher m = p.matcher(typeItemSelected);
-                
+
                 while (m.find()) {
-                    
+
                     typeItemSelected = m.group(1);
-                    
+
                 }
-                
+
                 this.FillComboBox(false, typeItemSelected, itemSelected);
-                
+
             } catch (Exception e) {
                 // TODO Auto-generated catch block
                 System.out.println(e);
-                
+
             }
         }
     }//GEN-LAST:event_ConvertersIClasstemStateChanged
 
     private void jComboBox02ToItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox02ToItemStateChanged
         if (evt.getStateChange() == ItemEvent.SELECTED || jComboBox02To.getSelectedIndex() >= 0 || jComboBox02To.getSelectedItem() != null) {
-            
+
             try {
-                
+
                 if (!jTextInsert.getText().trim().isEmpty()) {
-                    
+
                     String valueJComboBox01ConvertFrom = jComboBox01ConvertFrom.getSelectedItem().toString().trim();
                     String valueJComboBox02To = jComboBox02To.getSelectedItem().toString().trim();
                     String valueJTextInsert = jTextInsert.getText().trim();
@@ -259,48 +260,48 @@ public class ViewFormMain extends javax.swing.JFrame {
                     double valueConversion = conversionsCalculations.Conversions();
                     String valueConversionInString = Double.toString(valueConversion);
                     jTextConverted.setText(valueConversionInString);
-                    
+
                 } else {
-                    
+
                     JOptionPane.showMessageDialog(null, "Please first fill in the number (in the field in front of the Convert From text) that you want to be converted!");
-                    
+
                 }
             } catch (Exception e) {
-                
+
                 System.out.println(e);
-                
+
             }
         }
     }//GEN-LAST:event_jComboBox02ToItemStateChanged
 
     private void jTextInsertKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextInsertKeyPressed
         if (jComboBox02To.getSelectedIndex() >= 0 && !jComboBox02To.getSelectedItem().toString().isEmpty()) {
-            
+
             try {
-                
+
                 String jTextInsertWithoutSpaces = "";
-                
+
                 char keyInserted = evt.getKeyChar();
-                
+
                 jTextInsertWithoutSpaces = jTextInsert.getText();
-                
+
                 if (evt.getKeyCode() == evt.VK_BACK_SPACE || evt.getKeyCode() == evt.VK_DELETE) {
-                    
+
                     if (jTextInsertWithoutSpaces.length() > 0) {
                         jTextInsertWithoutSpaces = jTextInsertWithoutSpaces.substring(0, jTextInsertWithoutSpaces.length() - 1);
                     }
                 } else {
-                    
+
                     jTextInsertWithoutSpaces = jTextInsertWithoutSpaces + keyInserted;
-                    
+
                 }
-                
+
                 jTextInsertWithoutSpaces = jTextInsertWithoutSpaces.replace(" ", " ");
-                
+
                 int numberCaracteresjTextInsertWithoutSpaces = jTextInsertWithoutSpaces.length();
-                
+
                 if (numberCaracteresjTextInsertWithoutSpaces > 0) {
-                    
+
                     String valueJComboBox01ConvertFrom = jComboBox01ConvertFrom.getSelectedItem().toString().trim();
                     String valueJComboBox02To = jComboBox02To.getSelectedItem().toString().trim();
                     jTextInsertWithoutSpaces = jTextInsertWithoutSpaces.replaceAll(",", ".");
@@ -309,13 +310,13 @@ public class ViewFormMain extends javax.swing.JFrame {
                     double valueConversion = conversionsCalculations.Conversions();
                     String valueConversionInString = Double.toString(valueConversion);
                     jTextConverted.setText(valueConversionInString);
-                    
+
                 } else {
                     jTextConverted.setText("");
                 }
-                
+
             } catch (Exception e) {
-                
+
             }
         }
     }//GEN-LAST:event_jTextInsertKeyPressed
@@ -336,7 +337,7 @@ public class ViewFormMain extends javax.swing.JFrame {
 
     private void aboutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutMenuItemActionPerformed
         AboutDialog aboutDialog = new AboutDialog(new javax.swing.JFrame(), true);
-        aboutDialog.setVisible(true);       
+        aboutDialog.setVisible(true);
     }//GEN-LAST:event_aboutMenuItemActionPerformed
 
 

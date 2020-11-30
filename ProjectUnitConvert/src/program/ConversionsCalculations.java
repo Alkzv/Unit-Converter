@@ -18,23 +18,27 @@ public class ConversionsCalculations {
     private String valueJComboBox02To;
     private double valueJTextInsertInDouble;
     private double valueConverted;
-/** Constructor
- * 
- * @param valueJComboBox01ConvertFrom
- * @param valueJComboBox02To
- * @param valueJTextInsertInDouble 
- */
+
+    /**
+     * Constructor
+     *
+     * @param valueJComboBox01ConvertFrom
+     * @param valueJComboBox02To
+     * @param valueJTextInsertInDouble
+     */
     public ConversionsCalculations(String valueJComboBox01ConvertFrom, String valueJComboBox02To, double valueJTextInsertInDouble) {
 
         this.valueJComboBox01ConvertFrom = valueJComboBox01ConvertFrom;
         this.valueJComboBox02To = valueJComboBox02To;
         this.valueJTextInsertInDouble = valueJTextInsertInDouble;
-        
+
     }
-/** Returns the converted value method
- * 
- * @return valueConverted
- */
+
+    /**
+     * Returns the converted value method
+     *
+     * @return valueConverted
+     */
     public double Conversions() {
 
         try {
@@ -50,9 +54,9 @@ public class ConversionsCalculations {
             valueConverted = toClass.fromBasicUnit(convertFromClass.toBasicUnit(valueJTextInsertInDouble));
 
         } catch (Exception e) {
-            
+
             System.out.println(e);
-            
+
         }
         return valueConverted;
     }

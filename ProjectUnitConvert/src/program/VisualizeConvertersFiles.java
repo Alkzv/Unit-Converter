@@ -21,10 +21,13 @@ public class VisualizeConvertersFiles {
     private String path = System.getProperty("user.dir");
     private String fileNameWithOutExt;
 
-/** Search in the directory, get the name of the archives and returns a list with the names method
- * @return namesOfTheArchives
- * @throws Exception 
- */
+    /**
+     * Search in the directory, get the name of the archives and returns a list
+     * with the names method
+     *
+     * @return namesOfTheArchives
+     * @throws Exception
+     */
     public List<String> VisualizeConvertersFiles() throws Exception {
 
         File file = new File(path + "/src/converters");
@@ -36,11 +39,11 @@ public class VisualizeConvertersFiles {
 
                 fileNameWithOutExt = archive.getName().replaceFirst("[.][^.]+$", "");
                 namesOfTheArchives.add("converters." + fileNameWithOutExt);
-                
+
             }
 
         }
-        
+
         Collections.sort(namesOfTheArchives);
         return namesOfTheArchives;
     }
