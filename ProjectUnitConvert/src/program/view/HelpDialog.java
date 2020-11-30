@@ -7,7 +7,7 @@ package program.view;
 
 /**
  *
- * @author roque
+ * @author Roque Matheus Gomes Costa
  */
 public class HelpDialog extends javax.swing.JDialog {
 

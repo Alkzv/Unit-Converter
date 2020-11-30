@@ -7,7 +7,7 @@ package program.view;
 
 /**
  *
- * @author roque
+ * @author Roque Matheus Gomes Costa
  */
 public class AboutDialog extends javax.swing.JDialog {
 

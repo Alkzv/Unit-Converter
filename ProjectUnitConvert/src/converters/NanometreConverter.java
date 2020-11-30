@@ -10,23 +10,33 @@ import converters.Enum.MeasureType;
 
 /**
  *
- * @author PC - SAFE
+ * @author Lucas Alkimim Chaves
  */
 public class NanometreConverter extends AbstractConverter {
-
+/**
+ * Constructor
+ */
     public NanometreConverter() {
 
         super.setDescriptionClassConverter(MeasureType.DISTANCENANOMETRE);
 
     }
-
+/**
+ * Implemented method of the abstract class that receives the value inserted in the JTextField for conversion
+ * @param valueJTextInsert
+ * @return Double (100 * valueJTextInsert) / (10000000 * 100)
+ */
     @Override
     public double toBasicUnit(double valueJTextInsert) {
-        return (100 * valueJTextInsert) / (10000000 * 100);// nanometro to cm
+        return (100 * valueJTextInsert) / (10000000 * 100);// nanometre to cm
     }
-
+/**
+ * Implemented method of the abstract class that receives the value inserted in the JTextField for conversion
+ * @param valueJTextInsert
+ * @return Double - (valueJTextInsert) * (10000000) 
+ */
     @Override
     public double fromBasicUnit(double valueJTextInsert) {
-        return (valueJTextInsert) * (10000000);// cm to nanometro
+        return (valueJTextInsert) * (10000000);// cm to nanometre
     }
 }

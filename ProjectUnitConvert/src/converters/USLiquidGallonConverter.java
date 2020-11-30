@@ -10,21 +10,31 @@ import converters.Enum.MeasureType;
 
 /**
  *
- * @author PC-SAFE
+ * @author Lucas Alkimim Chaves
  */
 public class USLiquidGallonConverter extends AbstractConverter {
-
+/**
+ * Constructor
+ */
     public USLiquidGallonConverter() {
 
         super.setDescriptionClassConverter(MeasureType.VOLUMEUSLIQUIDGALLON);
 
     }
-
+/**
+ * Implemented method of the abstract class that receives the value inserted in the JTextField for conversion
+ * @param valueJTextInsert
+ * @return Double - (valueJTextInsert) * (3785)
+ */
     @Override
     public double toBasicUnit(double valueJTextInsert) {
         return (valueJTextInsert) * (3785);// gallon american to cubic centimetre 
     }
-
+/**
+ * Implemented method of the abstract class that receives the value inserted in the JTextField for conversion
+ * @param valueJTextInsert
+ * @return Double - (100 * valueJTextInsert) / (3785 * 100)
+ */
     @Override
     public double fromBasicUnit(double valueJTextInsert) {
         return (100 * valueJTextInsert) / (3785 * 100); // cubic centimetre to gallon american  

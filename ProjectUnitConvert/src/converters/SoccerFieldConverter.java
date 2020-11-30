@@ -10,21 +10,31 @@ import converters.Enum.MeasureType;
 
 /**
  *
- * @author PC
+ * @author Roque Matheus Gomes Costa
  */
 public class SoccerFieldConverter extends AbstractConverter {
-
+/**
+ * Constructor
+ */
     public SoccerFieldConverter() {
 
         super.setDescriptionClassConverter(MeasureType.AREASOCCERFIELD);
 
     }
-
+/**
+ * Implemented method of the abstract class that receives the value inserted in the JTextField for conversion
+ * @param valueJTextInsert
+ * @return valueJTextInsert
+ */
     @Override
     public double toBasicUnit(double valueJTextInsert) {
         return valueJTextInsert;
     }
-
+/**
+ * Implemented method of the abstract class that receives the value inserted in the JTextField for conversion
+ * @param valueJTextInsert
+ * @return valueJTextInsert
+ */
     @Override
     public double fromBasicUnit(double valueJTextInsert) {
         return valueJTextInsert;

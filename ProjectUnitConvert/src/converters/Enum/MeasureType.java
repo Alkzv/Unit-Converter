@@ -5,9 +5,9 @@
  */
 package converters.Enum;
 
-/**
+/** Filled enums 
  *
- * @author PC
+ * @author Roque Matheus Gomes Costa
  */
 public enum MeasureType {
 
@@ -41,16 +41,26 @@ public enum MeasureType {
 
     private String type;
     private String basicUnit;
-
+/** Constructor
+ * 
+ * @param type
+ * @param basicUnit 
+ */
     private MeasureType(String type, String basicUnit) {
         this.type = type;
         this.basicUnit = basicUnit;
     }
-
+/** Returns the basic unity method
+ * 
+ * @return basicUnit
+ */
     public final String getBasicUnit() {
         return basicUnit;
     }
-
+/** Returns the type method
+ * 
+ * @return type
+ */
     public String getTypeString() {
         return (type);
     }

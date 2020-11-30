@@ -7,7 +7,7 @@ package program.view;
 
 /**
  *
- * @author
+ * @author Roque Matheus Gomes Costa
  */
 public class ViewFirstForm extends javax.swing.JFrame {
 

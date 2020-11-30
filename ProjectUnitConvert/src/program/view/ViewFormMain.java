@@ -15,7 +15,10 @@ import java.awt.event.KeyEvent;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
-
+/**
+ * 
+ * @author Lucas Alkimim Chaves
+ */
 public class ViewFormMain extends javax.swing.JFrame {
     
     private boolean changedOptionJComboBox01 = false;

@@ -10,21 +10,31 @@ import converters.Enum.MeasureType;
 
 /**
  *
- * @author PC - SAFE
+ * @author Lucas Alkimim Chaves
  */
 public class LitreConverter extends AbstractConverter {
-
+/**
+ * Constructor
+ */
     public LitreConverter() {
 
         super.setDescriptionClassConverter(MeasureType.VOLUMELITRE);
 
     }
-
+/**
+ * Implemented method of the abstract class that receives the value inserted in the JTextField for conversion
+ * @param valueJTextInsert
+ * @return Double - (valueJTextInsert) * (1000)
+ */
     @Override
     public double toBasicUnit(double valueJTextInsert) {
         return (valueJTextInsert) * (1000);// litre to centimetre cubic 
     }
-
+/**
+ * Implemented method of the abstract class that receives the value inserted in the JTextField for conversion
+ * @param valueJTextInsert
+ * @return Double - (100 * valueJTextInsert) / (1000 * 100)
+ */
     @Override
     public double fromBasicUnit(double valueJTextInsert) {
         return (100 * valueJTextInsert) / (1000 * 100);// centimetre cubic to litre

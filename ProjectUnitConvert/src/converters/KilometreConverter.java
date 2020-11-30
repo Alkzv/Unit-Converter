@@ -10,21 +10,31 @@ import converters.Enum.MeasureType;
 
 /**
  *
- * @author PC - SAFE
+ * @author Lucas Alkimim Chaves
  */
 public class KilometreConverter extends AbstractConverter {
-
+/**
+ * Constructor
+ */
     public KilometreConverter() {
 
         super.setDescriptionClassConverter(MeasureType.DISTANCEKILOMETRE);
 
     }
-
+/**
+ * Implemented method of the abstract class that receives the value inserted in the JTextField for conversion
+ * @param valueJTextInsert
+ * @return Double - (valueJTextInsert) * (100000)
+ */
     @Override
     public double toBasicUnit(double valueJTextInsert) {
         return (valueJTextInsert) * (100000); // km para cm
     }
-
+/**
+ * 
+ * @param valueJTextInsert
+ * @return Double (100 * valueJTextInsert) / (100000 * 100) 
+ */
     @Override
     public double fromBasicUnit(double valueJTextInsert) {
         return (100 * valueJTextInsert) / (100000 * 100); //cm para km 

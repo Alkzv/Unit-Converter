@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
 
 /**
  *
- * @author PC
+ * @author Lucas Alkimim Chaves
  */
 public class ConversionsCalculations {
 
@@ -18,7 +18,12 @@ public class ConversionsCalculations {
     private String valueJComboBox02To;
     private double valueJTextInsertInDouble;
     private double valueConverted;
-
+/** Constructor
+ * 
+ * @param valueJComboBox01ConvertFrom
+ * @param valueJComboBox02To
+ * @param valueJTextInsertInDouble 
+ */
     public ConversionsCalculations(String valueJComboBox01ConvertFrom, String valueJComboBox02To, double valueJTextInsertInDouble) {
 
         this.valueJComboBox01ConvertFrom = valueJComboBox01ConvertFrom;
@@ -26,7 +31,10 @@ public class ConversionsCalculations {
         this.valueJTextInsertInDouble = valueJTextInsertInDouble;
         
     }
-
+/** Returns the converted value method
+ * 
+ * @return valueConverted
+ */
     public double Conversions() {
 
         try {
