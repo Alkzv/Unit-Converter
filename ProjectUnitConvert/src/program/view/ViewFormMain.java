@@ -212,6 +212,7 @@ public class ViewFormMain extends javax.swing.JFrame {
             
         }
     }
+    
     private void ConvertersIClasstemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ConvertersIClasstemStateChanged
         
         if (evt.getStateChange() == ItemEvent.SELECTED && changedOptionJComboBox01) {

@@ -28,7 +28,7 @@ public class KilometreConverter extends AbstractConverter {
  */
     @Override
     public double toBasicUnit(double valueJTextInsert) {
-        return (valueJTextInsert) * (100000); // km para cm
+        return (valueJTextInsert) * (100000); // km to cm
     }
 /**
  * 
@@ -37,6 +37,6 @@ public class KilometreConverter extends AbstractConverter {
  */
     @Override
     public double fromBasicUnit(double valueJTextInsert) {
-        return (100 * valueJTextInsert) / (100000 * 100); //cm para km 
+        return (100 * valueJTextInsert) / (100000 * 100); //cm to km 
     }
 }

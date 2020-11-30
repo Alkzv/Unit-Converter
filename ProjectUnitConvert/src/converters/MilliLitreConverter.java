@@ -28,7 +28,7 @@ public class MilliLitreConverter extends AbstractConverter {
  */
     @Override
     public double toBasicUnit(double valueJTextInsert) {
-        return (100*valueJTextInsert)/(1*100); // milliletre to centimetre cubic
+        return (100*valueJTextInsert)/(1*100); // millilitre to centimetre cubic
     }
 /**
  * Implemented method of the abstract class that receives the value inserted in the JTextField for conversion
@@ -37,6 +37,6 @@ public class MilliLitreConverter extends AbstractConverter {
  */
     @Override
     public double fromBasicUnit(double valueJTextInsert) {
-        return (valueJTextInsert) * (1);//centimetre cubic to milliletre
+        return (valueJTextInsert) * (1);//centimetre cubic to millilitre
     }
 }

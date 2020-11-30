@@ -28,7 +28,7 @@ public class DecimetreConverter extends AbstractConverter {
  */
     @Override
     public double toBasicUnit(double valueJTextInsert) {
-        return (valueJTextInsert) * (10); // decimetro para cm
+        return (valueJTextInsert) * (10); // decimetre to cm
     }
 /** Implemented method of the abstract class that receives the value inserted in the JTextField for conversion
  * 
@@ -37,6 +37,6 @@ public class DecimetreConverter extends AbstractConverter {
  */
     @Override
     public double fromBasicUnit(double valueJTextInsert) {
-        return (100 * valueJTextInsert) / (10 * 100); // cm para decimetro
+        return (100 * valueJTextInsert) / (10 * 100); // cm to decimetre
     }
 }

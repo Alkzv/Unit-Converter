@@ -28,7 +28,7 @@ public class InchConverter extends AbstractConverter {
  */
     @Override
     public double toBasicUnit(double valueJTextInsert) {
-        return (valueJTextInsert) * (2.54); // inch para cm
+        return (valueJTextInsert) * (2.54); // inch to cm
     }
 /**
  * Implemented method of the abstract class that receives the value inserted in the JTextField for conversion
@@ -37,6 +37,6 @@ public class InchConverter extends AbstractConverter {
  */
     @Override
     public double fromBasicUnit(double valueJTextInsert) {
-        return (100 * valueJTextInsert) / (100 * 2.54); // cm para inch
+        return (100 * valueJTextInsert) / (100 * 2.54); // cm to inch
     }
 }
