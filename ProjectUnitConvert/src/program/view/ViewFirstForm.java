@@ -9,12 +9,12 @@ package program.view;
  *
  * @author
  */
-public class ViewPrimeiroForm extends javax.swing.JFrame {
+public class ViewFirstForm extends javax.swing.JFrame {
 
     /**
      * Creates new form Iniciar
      */
-    public ViewPrimeiroForm() {
+    public ViewFirstForm() {
 
         initComponents();
 
@@ -40,13 +40,13 @@ public class ViewPrimeiroForm extends javax.swing.JFrame {
         jLabelTitulo.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
         jLabelTitulo.setForeground(new java.awt.Color(255, 255, 255));
         jLabelTitulo.setText("PROGRAM UNIT CONVERT ");
-        getContentPane().add(jLabelTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 450, -1));
+        getContentPane().add(jLabelTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 570, -1));
 
         jButtonEntrar.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         jButtonEntrar.setForeground(new java.awt.Color(13, 130, 203));
         jButtonEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/com.ep.simpleconvert.jpg"))); // NOI18N
         jButtonEntrar.setText("ENTER");
-        jButtonEntrar.setActionCommand("ENTER");
+        jButtonEntrar.setBorder(null);
         jButtonEntrar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonEntrar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jButtonEntrar.addActionListener(new java.awt.event.ActionListener() {
@@ -80,7 +80,7 @@ public class ViewPrimeiroForm extends javax.swing.JFrame {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ViewPrimeiroForm().setVisible(true);
+                new ViewFirstForm().setVisible(true);
             }
         });
     }

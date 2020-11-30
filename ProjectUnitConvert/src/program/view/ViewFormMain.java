@@ -41,6 +41,7 @@ public class ViewFormMain extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuItem2 = new javax.swing.JMenuItem();
         jLabelTextConvertFrom = new javax.swing.JLabel();
         jTextInsert = new javax.swing.JTextField();
         jLabelTextTo = new javax.swing.JLabel();
@@ -52,6 +53,11 @@ public class ViewFormMain extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        helpMenuItem = new javax.swing.JMenuItem();
+        aboutMenuItem = new javax.swing.JMenuItem();
+        disclaimerMenuItem = new javax.swing.JMenuItem();
+
+        jMenuItem2.setText("jMenuItem2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -60,9 +66,9 @@ public class ViewFormMain extends javax.swing.JFrame {
         jLabelTextConvertFrom.setBackground(new java.awt.Color(255, 255, 255));
         jLabelTextConvertFrom.setFont(new java.awt.Font("Calibri", 1, 22)); // NOI18N
         jLabelTextConvertFrom.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelTextConvertFrom.setText("  CONVERT FROM");
+        jLabelTextConvertFrom.setText(" CONVERT FROM");
         jLabelTextConvertFrom.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
-        getContentPane().add(jLabelTextConvertFrom, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 170, 70));
+        getContentPane().add(jLabelTextConvertFrom, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 210, 70));
 
         jTextInsert.setFont(new java.awt.Font("Calibri", 1, 16)); // NOI18N
         jTextInsert.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242)));
@@ -72,25 +78,25 @@ public class ViewFormMain extends javax.swing.JFrame {
                 jTextInsertKeyPressed(evt);
             }
         });
-        getContentPane().add(jTextInsert, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, 150, 70));
+        getContentPane().add(jTextInsert, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, 150, 70));
 
         jLabelTextTo.setFont(new java.awt.Font("Calibri", 1, 22)); // NOI18N
         jLabelTextTo.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelTextTo.setText("              TO           ");
+        jLabelTextTo.setText("                    TO");
         jLabelTextTo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        getContentPane().add(jLabelTextTo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 170, 70));
+        getContentPane().add(jLabelTextTo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 210, 70));
 
         jTextConverted.setEditable(false);
         jTextConverted.setBackground(new java.awt.Color(204, 204, 204));
         jTextConverted.setFont(new java.awt.Font("Calibri", 1, 16)); // NOI18N
         jTextConverted.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242)));
         jTextConverted.setSelectionColor(new java.awt.Color(0, 102, 255));
-        getContentPane().add(jTextConverted, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, 150, 70));
+        getContentPane().add(jTextConverted, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 150, 70));
 
         jComboBox01ConvertFrom.setFont(new java.awt.Font("Calibri", 1, 16)); // NOI18N
         jComboBox01ConvertFrom.setMaximumRowCount(200);
         jComboBox01ConvertFrom.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242)));
-        jComboBox01ConvertFrom.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jComboBox01ConvertFrom.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jComboBox01ConvertFrom.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 ConvertersIClasstemStateChanged(evt);
@@ -101,7 +107,7 @@ public class ViewFormMain extends javax.swing.JFrame {
         jComboBox02To.setFont(new java.awt.Font("Calibri", 1, 16)); // NOI18N
         jComboBox02To.setMaximumRowCount(200);
         jComboBox02To.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242)));
-        jComboBox02To.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jComboBox02To.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jComboBox02To.setEnabled(false);
         jComboBox02To.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -127,6 +133,31 @@ public class ViewFormMain extends javax.swing.JFrame {
         jMenuBar2.add(jMenu1);
 
         jMenu2.setText("Help");
+
+        helpMenuItem.setText("Help");
+        helpMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                helpMenuItemActionPerformed(evt);
+            }
+        });
+        jMenu2.add(helpMenuItem);
+
+        aboutMenuItem.setText("About");
+        aboutMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                aboutMenuItemActionPerformed(evt);
+            }
+        });
+        jMenu2.add(aboutMenuItem);
+
+        disclaimerMenuItem.setText("Disclaimer");
+        disclaimerMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                disclaimerMenuItemActionPerformed(evt);
+            }
+        });
+        jMenu2.add(disclaimerMenuItem);
+
         jMenuBar2.add(jMenu2);
 
         setJMenuBar(jMenuBar2);
@@ -289,8 +320,26 @@ public class ViewFormMain extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
+    private void disclaimerMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_disclaimerMenuItemActionPerformed
+        DisclaimerDialog disclaimerDialog = new DisclaimerDialog(new javax.swing.JFrame(), true);
+        disclaimerDialog.setVisible(true);
+    }//GEN-LAST:event_disclaimerMenuItemActionPerformed
+
+    private void helpMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_helpMenuItemActionPerformed
+        HelpDialog helpDialog = new HelpDialog(new javax.swing.JFrame(), true);
+        helpDialog.setVisible(true);
+    }//GEN-LAST:event_helpMenuItemActionPerformed
+
+    private void aboutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutMenuItemActionPerformed
+        AboutDialog aboutDialog = new AboutDialog(new javax.swing.JFrame(), true);
+        aboutDialog.setVisible(true);       
+    }//GEN-LAST:event_aboutMenuItemActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem aboutMenuItem;
+    private javax.swing.JMenuItem disclaimerMenuItem;
+    private javax.swing.JMenuItem helpMenuItem;
     private javax.swing.JComboBox<String> jComboBox01ConvertFrom;
     private javax.swing.JComboBox<String> jComboBox02To;
     private javax.swing.JLabel jLabelBackground;
@@ -300,6 +349,7 @@ public class ViewFormMain extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JTextField jTextConverted;
     private javax.swing.JTextField jTextInsert;
     // End of variables declaration//GEN-END:variables

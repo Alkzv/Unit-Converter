@@ -24,7 +24,7 @@ public class ConversionsCalculations {
         this.valueJComboBox01ConvertFrom = valueJComboBox01ConvertFrom;
         this.valueJComboBox02To = valueJComboBox02To;
         this.valueJTextInsertInDouble = valueJTextInsertInDouble;
-
+        
     }
 
     public double Conversions() {
