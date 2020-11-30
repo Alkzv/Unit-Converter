@@ -36,15 +36,12 @@ public class HelpDialog extends javax.swing.JDialog {
         setAutoRequestFocus(false);
         setBackground(java.awt.Color.white);
 
-        jScrollPane1.setForeground(javax.swing.UIManager.getDefaults().getColor("Button.darkShadow"));
-
         jTextArea1.setEditable(false);
-        jTextArea1.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.background"));
         jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Ubuntu", 0, 17)); // NOI18N
+        jTextArea1.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("This program was written to be a simple educational project that shows how to use the basic of Graphical User Interface (Swing), and some software engineering techniques.\nThe aim of the program is show different shapes according to menu choices.\n\nThe menu options are very straight: \n\n* From the \"File\" menu, one can choose among some available actions that draw shapes in the background, and finish the program;\n* From the \"Help\" menu, one can choose see standard texts: \"Help\", \"Disclaimer\", and \"About\".\n\n\nTechnical stuff:\n\n* The program was written in Java 1.8 and runs on most of desktop and notebook operating systems.\n* No user information is collected, stored, or transmitted by the program.\n\n");
+        jTextArea1.setText("This program was written to be a simple educational project that shows how to use the basic of Graphical User Interface (Swing), and some software engineering techniques.\nThe aim of the program is show different shapes according to menu choices.\n\nThe menu options are very straight:\n\n• From the \"File\" menu, one can choose among some available actions that draw shapes in the background, and finish the program;\n• From the \"Help\" menu, one can choose see standard texts: \"Help\", \"Disclaimer\", and \"About\".\n\nTechnical stuff:\n\n• The program was written in Java 1.8 and runs on most of desktop and notebook operating systems.\n• No user information is collected, stored, or transmitted by the program.\n\n");
         jTextArea1.setWrapStyleWord(true);
         jTextArea1.setBorder(null);
         jScrollPane1.setViewportView(jTextArea1);

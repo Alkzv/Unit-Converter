@@ -47,11 +47,6 @@
   </Layout>
   <SubComponents>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
-      <Properties>
-        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="0" green="0" id="Button.darkShadow" palette="3" red="0" type="palette"/>
-        </Property>
-      </Properties>
       <AuxValues>
         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
       </AuxValues>
@@ -61,16 +56,13 @@
         <Component class="javax.swing.JTextArea" name="jTextArea1">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="f7" green="f7" id="Button.background" palette="3" red="f7" type="palette"/>
-            </Property>
             <Property name="columns" type="int" value="20"/>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Ubuntu" size="17" style="0"/>
+              <Font name="Calibri" size="18" style="0"/>
             </Property>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="This program was written to be a simple educational project that shows how to use the basic of Graphical User Interface (Swing), and some software engineering techniques.&#xa;The aim of the program is show different shapes according to menu choices.&#xa;&#xa;The menu options are very straight: &#xa;&#xa;* From the &quot;File&quot; menu, one can choose among some available actions that draw shapes in the background, and finish the program;&#xa;* From the &quot;Help&quot; menu, one can choose see standard texts: &quot;Help&quot;, &quot;Disclaimer&quot;, and &quot;About&quot;.&#xa;&#xa;&#xa;Technical stuff:&#xa;&#xa;* The program was written in Java 1.8 and runs on most of desktop and notebook operating systems.&#xa;* No user information is collected, stored, or transmitted by the program.&#xa;&#xa;"/>
+            <Property name="text" type="java.lang.String" value="This program was written to be a simple educational project that shows how to use the basic of Graphical User Interface (Swing), and some software engineering techniques.&#xa;The aim of the program is show different shapes according to menu choices.&#xa;&#xa;The menu options are very straight:&#xa;&#xa;&#x2022; From the &quot;File&quot; menu, one can choose among some available actions that draw shapes in the background, and finish the program;&#xa;&#x2022; From the &quot;Help&quot; menu, one can choose see standard texts: &quot;Help&quot;, &quot;Disclaimer&quot;, and &quot;About&quot;.&#xa;&#xa;Technical stuff:&#xa;&#xa;&#x2022; The program was written in Java 1.8 and runs on most of desktop and notebook operating systems.&#xa;&#x2022; No user information is collected, stored, or transmitted by the program.&#xa;&#xa;"/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>

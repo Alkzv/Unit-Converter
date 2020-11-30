@@ -29,24 +29,18 @@ public class ViewFirstForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabelTitulo = new javax.swing.JLabel();
         jButtonEntrar = new javax.swing.JButton();
+        jLabelTitulo = new javax.swing.JLabel();
         jLabelFundoView = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabelTitulo.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
-        jLabelTitulo.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelTitulo.setText("PROGRAM UNIT CONVERT ");
-        getContentPane().add(jLabelTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 570, -1));
-
         jButtonEntrar.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
         jButtonEntrar.setForeground(new java.awt.Color(13, 130, 203));
         jButtonEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/com.ep.simpleconvert.jpg"))); // NOI18N
         jButtonEntrar.setText("ENTER");
-        jButtonEntrar.setBorder(null);
         jButtonEntrar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonEntrar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jButtonEntrar.addActionListener(new java.awt.event.ActionListener() {
@@ -55,6 +49,11 @@ public class ViewFirstForm extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButtonEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 110, 290, 240));
+
+        jLabelTitulo.setFont(new java.awt.Font("Calibri", 1, 36)); // NOI18N
+        jLabelTitulo.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelTitulo.setText("PROGRAM UNIT CONVERT ");
+        getContentPane().add(jLabelTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 410, -1));
 
         jLabelFundoView.setFont(new java.awt.Font("Elephant", 0, 36)); // NOI18N
         jLabelFundoView.setForeground(new java.awt.Color(51, 153, 255));

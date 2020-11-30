@@ -66,7 +66,7 @@ public class ViewFormMain extends javax.swing.JFrame {
         jLabelTextConvertFrom.setBackground(new java.awt.Color(255, 255, 255));
         jLabelTextConvertFrom.setFont(new java.awt.Font("Calibri", 1, 22)); // NOI18N
         jLabelTextConvertFrom.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelTextConvertFrom.setText(" CONVERT FROM");
+        jLabelTextConvertFrom.setText("     CONVERT FROM");
         jLabelTextConvertFrom.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         getContentPane().add(jLabelTextConvertFrom, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 210, 70));
 
@@ -78,11 +78,11 @@ public class ViewFormMain extends javax.swing.JFrame {
                 jTextInsertKeyPressed(evt);
             }
         });
-        getContentPane().add(jTextInsert, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, 150, 70));
+        getContentPane().add(jTextInsert, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 70, 150, 70));
 
         jLabelTextTo.setFont(new java.awt.Font("Calibri", 1, 22)); // NOI18N
         jLabelTextTo.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelTextTo.setText("                    TO");
+        jLabelTextTo.setText("                  TO");
         jLabelTextTo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         getContentPane().add(jLabelTextTo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 210, 70));
 
@@ -91,7 +91,7 @@ public class ViewFormMain extends javax.swing.JFrame {
         jTextConverted.setFont(new java.awt.Font("Calibri", 1, 16)); // NOI18N
         jTextConverted.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242), new java.awt.Color(70, 183, 242)));
         jTextConverted.setSelectionColor(new java.awt.Color(0, 102, 255));
-        getContentPane().add(jTextConverted, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 190, 150, 70));
+        getContentPane().add(jTextConverted, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 190, 150, 70));
 
         jComboBox01ConvertFrom.setFont(new java.awt.Font("Calibri", 1, 16)); // NOI18N
         jComboBox01ConvertFrom.setMaximumRowCount(200);
@@ -102,7 +102,7 @@ public class ViewFormMain extends javax.swing.JFrame {
                 ConvertersIClasstemStateChanged(evt);
             }
         });
-        getContentPane().add(jComboBox01ConvertFrom, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 70, 530, 70));
+        getContentPane().add(jComboBox01ConvertFrom, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 70, 530, 70));
 
         jComboBox02To.setFont(new java.awt.Font("Calibri", 1, 16)); // NOI18N
         jComboBox02To.setMaximumRowCount(200);
@@ -114,7 +114,7 @@ public class ViewFormMain extends javax.swing.JFrame {
                 jComboBox02ToItemStateChanged(evt);
             }
         });
-        getContentPane().add(jComboBox02To, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 190, 530, 70));
+        getContentPane().add(jComboBox02To, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, 530, 70));
 
         jLabelBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/FundoView1.png"))); // NOI18N
         getContentPane().add(jLabelBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(-16, 0, 1380, 390));
